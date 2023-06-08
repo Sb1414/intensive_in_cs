@@ -72,15 +72,22 @@ var cashRegister3 = new CashRegister("Cash Register #1");
 var cashRegister4 = new CashRegister("Cash Register #2");
 
 var customer7 = new Customer(1, "Customer 1");
-var customer8 = new Customer(2, "Customer 2");
+var customer8 = new Customer(1, "Customer 2");
+var customer9 = new Customer(2, "Customer 3");
 
-cashRegister3.AddCustomer(customer1);
-cashRegister4.AddCustomer(customer2);
+customer7.FillCart(50);
+customer8.FillCart(5);
+customer9.FillCart(5);
+
+cashRegister3.AddCustomer(customer7);
+cashRegister4.AddCustomer(customer8);
+cashRegister4.AddCustomer(customer9);
 
 var cashRegisters = new List<CashRegister> { cashRegister3, cashRegister4 };
 
-var chosenCashRegister1 = customer7.ChooseCashRegisterByFewestCustomers(cashRegisters);
-Console.WriteLine($"наименьшее количество клиентов: {chosenCashRegister1?.Name}");
+var chosenCashRegister3 = customer9.ChooseCashRegisterByFewestCustomers(cashRegisters);
+Console.WriteLine($"наименьшее количество клиентов: {chosenCashRegister3?.Name}");
 
-var chosenCashRegister2 = customer8.ChooseCashRegisterByFewestItems(cashRegisters);
-Console.WriteLine($"наименьшее количество товаров: {chosenCashRegister2?.Name}");
+var chosenCashRegister4 = customer9.ChooseCashRegisterByFewestItems(cashRegisters);
+Console.WriteLine($"наименьшее количество товаров: {chosenCashRegister4?.Name}");
+
