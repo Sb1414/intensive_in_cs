@@ -10,10 +10,15 @@ Vladimir
 Igor
 Pavel
 Anastasia
+Nastasia
+Nastya
 Maria
+Marina
+Marfa
 Ekaterina
 Olga
 Tatiana
+Tanya
 Elena
 Natalia
 Irina
@@ -21,6 +26,7 @@ Svetlana
 John
 David
 Michael
+Misha
 James
 William
 Robert
@@ -29,6 +35,7 @@ Joseph
 Thomas
 Charles
 Mary
+Mark
 Jennifer
 Sarah
 Elizabeth
@@ -38,3 +45,15 @@ Hannah
 Ashley
 Olivia
 Samantha
+Andrew
+Denis
+Victor
+Eugene
+Alexey
+Dmitriy
+Sergey
+Anton
+Yulia
+Daria
+Yana
+Victoria

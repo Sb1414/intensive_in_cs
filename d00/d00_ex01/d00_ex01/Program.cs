@@ -6,58 +6,66 @@ try
 {
     string currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-    // Удаление последних 16 символов из строки filePath
+    // Удаление последних 16 символов из строки filePath для Visual Studio
     currentDirectory = currentDirectory.Substring(0, currentDirectory.Length - 16);
-
     string filePath = Path.Combine(currentDirectory, @"names.txt");
 
+    string[] names = LoadNamesFromFile(filePath); // Загрузка списка имен из файла
 
-    // Загрузка списка имен из файла
-    string[] names = LoadNamesFromFile(filePath);
-
-    // Запрашиваем имя пользователя
     Console.WriteLine("Enter name:");
     string userInput = Console.ReadLine();
 
-    string foundName = FindExactName(userInput, names);
+    string foundName = FindName(userInput, names);
+
     if (foundName != null)
     {
-        // Имя найдено в словаре
         Console.WriteLine($"Hi, {foundName}!");
     }
     else
     {
-        string correctedName = FindClosestName(userInput, names);
-        if (correctedName != null)
-        {
-            // Предложение исправленного имени
-            Console.WriteLine($"Did you mean \"{correctedName}\"? Yes/No");
-            string answer = Console.ReadLine();
-
-            if (answer.Equals("Y", StringComparison.OrdinalIgnoreCase))
-            {
-                // Исправленное имя принято
-                Console.WriteLine($"Hi, {correctedName}!");
-            }
-            else if (answer.Equals("N", StringComparison.OrdinalIgnoreCase))
-            {
-                Console.WriteLine("Your name was not found.");
-            }
-            else
-            {
-                Console.WriteLine("Your name was not found.");
-            }
-        }
-        else
-        {
-            // Имя не найдено
-            Console.WriteLine("Your name was not found.");
-        }
+        OfferCorrectedName(userInput, names);
     }
 }
 catch (Exception ex)
 {
     Console.WriteLine($"{ex.Message}");
+}
+
+static void OfferCorrectedName(string userInput, string[] names)
+{
+    string[] correctedNames = FindClosestNames(userInput, names);
+
+    if (correctedNames != null && correctedNames.Length > 0)
+    {
+        for (int i = 0; i < correctedNames.Length; i++)
+        {
+            Console.WriteLine($"Did you mean \"{correctedNames[i]}\"? Yes/No");
+            string answer = Console.ReadLine();
+
+            if (answer.Equals("Y", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine($"Hi, {correctedNames[i]}!");
+                return;
+            }
+            else if (answer.Equals("N", StringComparison.OrdinalIgnoreCase))
+            {
+                if (i == correctedNames.Length - 1)
+                {
+                    Console.WriteLine("Your name was not found.");
+                    return;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Something went wrong. Check your input and retry.");
+                i--;
+            }
+        }
+    }
+    else
+    {
+        Console.WriteLine("Your name was not found.");
+    }
 }
 
 static string[] LoadNamesFromFile(string filename)
@@ -80,7 +88,7 @@ static string[] LoadNamesFromFile(string filename)
     }
 }
 
-static string FindExactName(string input, string[] names)
+static string FindName(string input, string[] names)
 {
     foreach (string name in names)
     {
@@ -93,28 +101,27 @@ static string FindExactName(string input, string[] names)
     return null;
 }
 
-static string FindClosestName(string input, string[] names)
+static string[] FindClosestNames(string input, string[] names)
 {
-    string closestName = null;
-    int minDistance = int.MaxValue;
+    List<string> closestNames = new List<string>();
 
     foreach (string name in names)
     {
         int distance = ComputeLevenshteinDistance(input, name);
-        if (distance < minDistance)
+        if (distance < 2)
         {
-            minDistance = distance;
-            closestName = name;
+            closestNames.Add(name);
         }
     }
 
-    if (minDistance < 2)
+    if (closestNames.Count > 0)
     {
-        return closestName;
+        return closestNames.ToArray();
     }
 
     return null;
 }
+
 
 static int ComputeLevenshteinDistance(string source, string target)
 {
