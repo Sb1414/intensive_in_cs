@@ -9,20 +9,36 @@ if (args.Length != 2)
     return;
 }
 
-string amountString = args[0];
-string ratesDirectory = args[1];
+string amountString = args[0].Trim('"');
+string ratesDirectory = args[1].Trim('"');
 
-if (!decimal.TryParse(amountString, out decimal amount))
+string[] amountParts = amountString.Split(' ');
+
+// Console.WriteLine(amountString + " <-- ");
+// Console.WriteLine(ratesDirectory + " <-- ");
+/*
+for (int i = 0; i < amountParts.Length; i++)
 {
-    Console.WriteLine("Input error. Check the input data and repeat the request.");
+    Console.WriteLine(amountParts[i] + " - " + i);
+}
+*/
+if (amountParts.Length != 2)
+{
+    Console.WriteLine("Input error. Invalid amount format.");
     return;
 }
 
+if (!decimal.TryParse(amountParts[0], out decimal amount))
+{
+    Console.WriteLine("Input error. Invalid amount.");
+    return;
+}
+
+string currency = amountParts[1];
+
 Exchanger exchanger = new Exchanger(ratesDirectory);
 
-Console.WriteLine($"Amount in the original currency: {amount} RUB");
-
-List<ExchangeSum> convertedSums = exchanger.Convert(amount, "RUB");
+List<ExchangeSum> convertedSums = exchanger.Convert(amount, currency);
 
 foreach (ExchangeSum sum in convertedSums)
 {
