@@ -127,7 +127,12 @@ while (store_.IsOpen() && customers.Any())
             }
             store_.Storage.TakeItems(customer_.CartItems);
         }
-
+        else if (store.Storage.IsEmpty())
+        {
+            Console.WriteLine($"{customer_.Name}, customer #{customer_.CustomerNumber} ({customer_.CartItems} items left in cart)");
+            customers.Remove(customer_);
+            continue;
+        }
         var chosenCashRegister = customer_.ChooseCashRegisterByFewestCustomers(store_.CashRegisters);
         if (chosenCashRegister != null)
         {
@@ -136,52 +141,3 @@ while (store_.IsOpen() && customers.Any())
         }
     }
 }
-
-
-/*
-
-// Create a store with 3 cash registers and a storage capacity of 40
-Store st = new Store(40, 3);
-Storage storage2 = new Storage(40); // Создайте экземпляр класса Storage
-
-// Create 10 different customers
-List<Customer> customers = new List<Customer>();
-for (int i = 1; i <= 10; i++)
-{
-    customers.Add(new Customer(i, $"Customer{i}"));
-}
-
-while (st.IsOpen() && customers.Count > 0)
-{
-    foreach (Customer cust in customers.ToArray())
-    {
-        cust.FillCart(7);
-
-        CashRegister chosenCashRegister = cust.ChooseCashRegisterByFewestCustomers(st.CashRegisters);
-
-        chosenCashRegister.AddCustomer(cust);
-
-        if (cust.CartItems == 0)
-        {
-            customers.Remove(cust);
-        }
-        foreach (CashRegister cashRegister in st.CashRegisters)
-        {
-            if (cashRegister.GetCustomersCount() > 0)
-            {
-                Customer servedCustomer_ = cashRegister.ServeNextCustomer();
-
-                st.StorageCapacity -= servedCustomer_.CartItems; // Обновление storageCapacity
-
-                if (st.StorageCapacity < 0 && servedCustomer_.CartItems > 0)
-                {
-                    Console.WriteLine($"{servedCustomer_.Name}, покупатель #{servedCustomer_.CustomerNumber} ({servedCustomer_.CartItems} предметов осталось в корзине)");
-                }
-
-                Console.WriteLine($"{servedCustomer_}, {chosenCashRegister} ({cashRegister.GetCustomersCount()} человек с {cashRegister.GetTotalItemsInQueue()} предметами позади)");
-            }
-        }
-    }
-}
-
-*/
