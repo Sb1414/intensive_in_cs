@@ -8,10 +8,10 @@ namespace d02_ex00.Models
 {
     public struct ExchangeSum
     {
-        public decimal Amount { get; }
+        public double Amount { get; }
         public string Currency { get; }
 
-        public ExchangeSum(decimal amount, string currency)
+        public ExchangeSum(double amount, string currency)
         {
             Amount = amount;
             Currency = currency;

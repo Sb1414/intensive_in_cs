@@ -27,9 +27,9 @@ namespace d02_ex00
                 foreach (string line in lines)
                 {
                     string[] parts = line.Split(':');
-                    if (parts.Length == 2 && decimal.TryParse(parts[1], out decimal rate))
+                    if (parts.Length == 2 && double.TryParse(parts[1], out double rate))
                     {
-                        rates.Add(new ExchangeRate(parts[0], Path.GetFileNameWithoutExtension(file), rate));
+                        rates.Add(new ExchangeRate(Path.GetFileNameWithoutExtension(file), parts[0], rate));
                     }
                 }
             }
@@ -37,13 +37,13 @@ namespace d02_ex00
             return rates;
         }
 
-        public decimal Convert(decimal amount, string fromCurrency, string toCurrency)
+        public double Convert(double amount, string fromCurrency, string toCurrency)
         {
-            decimal rate = GetExchangeRate(fromCurrency, toCurrency);
+            double rate = GetExchangeRate(fromCurrency, toCurrency);
             return amount * rate;
         }
 
-        public List<ExchangeSum> Convert(decimal amount, string fromCurrency)
+        public List<ExchangeSum> Convert(double amount, string fromCurrency)
         {
             List<ExchangeSum> convertedSums = new List<ExchangeSum>();
 
@@ -51,7 +51,7 @@ namespace d02_ex00
             {
                 if (rate.FromCurrency == fromCurrency)
                 {
-                    decimal convertedAmount = Convert(amount, fromCurrency, rate.ToCurrency);
+                    double convertedAmount = Convert(amount, fromCurrency, rate.ToCurrency);
                     convertedSums.Add(new ExchangeSum(convertedAmount, rate.ToCurrency));
                 }
             }
@@ -59,7 +59,7 @@ namespace d02_ex00
             return convertedSums;
         }
 
-        private decimal GetExchangeRate(string fromCurrency, string toCurrency)
+        private double GetExchangeRate(string fromCurrency, string toCurrency)
         {
             foreach (ExchangeRate rate in exchangeRates)
             {

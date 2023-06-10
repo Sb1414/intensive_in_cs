@@ -14,21 +14,13 @@ string ratesDirectory = args[1].Trim('"');
 
 string[] amountParts = amountString.Split(' ');
 
-// Console.WriteLine(amountString + " <-- ");
-// Console.WriteLine(ratesDirectory + " <-- ");
-/*
-for (int i = 0; i < amountParts.Length; i++)
-{
-    Console.WriteLine(amountParts[i] + " - " + i);
-}
-*/
 if (amountParts.Length != 2)
 {
     Console.WriteLine("Input error. Invalid amount format.");
     return;
 }
 
-if (!decimal.TryParse(amountParts[0], out decimal amount))
+if (!double.TryParse(amountParts[0], out double amount))
 {
     Console.WriteLine("Input error. Invalid amount.");
     return;
@@ -40,6 +32,7 @@ Exchanger exchanger = new Exchanger(ratesDirectory);
 
 List<ExchangeSum> convertedSums = exchanger.Convert(amount, currency);
 
+Console.WriteLine("Amount in the original currency: " + amountString);
 foreach (ExchangeSum sum in convertedSums)
 {
     Console.WriteLine(sum.ToString());
