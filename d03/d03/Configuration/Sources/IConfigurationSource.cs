@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace d03.Sources
 {
-    internal class IConfigurationSource
+    internal interface IConfigurationSource
     {
+        Dictionary<string, string> LoadParameters();
     }
+
 }
