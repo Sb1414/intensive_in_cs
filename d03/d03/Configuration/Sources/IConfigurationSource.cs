@@ -8,7 +8,6 @@ namespace d03.Sources
 {
     internal interface IConfigurationSource
     {
-        Dictionary<string, string> LoadParameters();
+        Dictionary<string, object> LoadParameters();
     }
-
 }

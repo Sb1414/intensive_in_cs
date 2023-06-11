@@ -9,7 +9,7 @@ namespace d03.Configuration
 {
     internal class Configuration
     {
-        private Dictionary<string, string> Params;
+        public Dictionary<string, object> Params;
 
         public Configuration(IConfigurationSource source)
         {
@@ -20,9 +20,10 @@ namespace d03.Configuration
         {
             if (Params.ContainsKey(key))
             {
-                return Params[key];
+                return Params[key]?.ToString();
             }
             return null;
         }
     }
+
 }
