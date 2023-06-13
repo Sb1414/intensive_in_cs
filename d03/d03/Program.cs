@@ -10,11 +10,27 @@ if (args.Length < 1)
 }
 
 string filePath = args[0];
-var jsonSource = new JsonSource(filePath);
-var configuration = new Configuration(jsonSource);
+string extension = Path.GetExtension(filePath);
+
+IConfigurationSource source;
+if (extension.Equals(".json", StringComparison.OrdinalIgnoreCase))
+{
+    source = new JsonSource(filePath);
+}
+else if (extension.Equals(".yml", StringComparison.OrdinalIgnoreCase) || extension.Equals(".yaml", StringComparison.OrdinalIgnoreCase))
+{
+    source = new YamlSource(filePath);
+}
+else
+{
+    Console.WriteLine("Неподдерживаемый формат файла.");
+    return;
+}
+
+var configuration = new Configuration(source);
 
 Console.WriteLine("Configuration");
-foreach (var param in configuration.Params)
+foreach (var parameter in configuration.Params)
 {
-    Console.WriteLine($"{param.Key}: {param.Value}");
+    Console.WriteLine($"{parameter.Key}: {parameter.Value}");
 }

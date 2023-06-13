@@ -18,39 +18,56 @@ namespace d03.Sources
 
         public Dictionary<string, object> LoadParameters()
         {
+            string json = File.ReadAllText(filePath);
+            return ParseJson(json);
+        }
+
+        private Dictionary<string, object> ParseJson(string json)
+        {
             var parameters = new Dictionary<string, object>();
 
-            using (var reader = new StreamReader(filePath))
+            var options = new JsonSerializerOptions
             {
-                string line;
-                string currentKey = null;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    if (line.Trim().StartsWith("#"))
-                    {
-                        // Пропускаем комментарии
-                        continue;
-                    }
+                PropertyNameCaseInsensitive = true,
+                ReadCommentHandling = JsonCommentHandling.Skip
+            };
 
-                    if (line.Contains(":"))
-                    {
-                        var parts = line.Split(":");
-                        if (parts.Length == 2)
-                        {
-                            currentKey = parts[0].Trim();
-                            var value = parts[1].Trim();
-                            parameters[currentKey] = value;
-                        }
-                    }
-                    else if (!string.IsNullOrWhiteSpace(currentKey))
-                    {
-                        // Продолжаем добавлять значения для предыдущего ключа
-                        parameters[currentKey] += "" + line.Trim();
-                    }
+            using (JsonDocument document = JsonDocument.Parse(json))
+            {
+                foreach (JsonProperty property in document.RootElement.EnumerateObject())
+                {
+                    string key = property.Name;
+                    object value = GetValue(property.Value);
+
+                    parameters[key] = value;
                 }
             }
 
             return parameters;
         }
+
+        private object GetValue(JsonElement element)
+        {
+            switch (element.ValueKind)
+            {
+                case JsonValueKind.String:
+                    return element.GetString();
+                case JsonValueKind.Number:
+                    if (element.TryGetInt32(out int intValue))
+                        return intValue;
+                    if (element.TryGetDouble(out double doubleValue))
+                        return doubleValue;
+                    if (element.TryGetDecimal(out decimal decimalValue))
+                        return decimalValue;
+                    return element.GetRawText();
+                case JsonValueKind.True:
+                    return true;
+                case JsonValueKind.False:
+                    return false;
+                default:
+                    return element.GetRawText();
+            }
+        }
     }
+
 }
