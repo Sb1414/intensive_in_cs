@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using YamlDotNet.Serialization;
-using YamlDotNet.Serialization.NamingConventions;
 
 namespace d03.Sources
 {
@@ -19,13 +17,7 @@ namespace d03.Sources
 
         public Dictionary<string, object> LoadParameters()
         {
-            var deserializer = new DeserializerBuilder()
-                .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                .Build();
-
-            string yamlContent = File.ReadAllText(filePath);
-            var parameters = deserializer.Deserialize<Dictionary<string, object>>(yamlContent);
-            return parameters;
+            throw new NotImplementedException("YAML source is not implemented yet.");
         }
     }
 }
