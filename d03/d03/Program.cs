@@ -29,8 +29,14 @@ else
 
 var configuration = new Configuration(source);
 
-Console.WriteLine("Configuration");
-foreach (var parameter in configuration.Params)
+if (configuration != null)
 {
-    Console.WriteLine($"{parameter.Key}: {parameter.Value}");
+    int i = 0;
+    foreach (var parameter in configuration.Params)
+    {
+        if (i == 0)
+            Console.WriteLine("Configuration");
+        Console.WriteLine($"{parameter.Key}: {parameter.Value}");
+        i++;
+    }
 }

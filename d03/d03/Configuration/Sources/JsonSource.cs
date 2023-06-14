@@ -16,10 +16,18 @@ namespace d03.Sources
             this.filePath = filePath;
         }
 
-        public Dictionary<string, object> LoadParameters()
+        public Dictionary<string, object>? LoadParameters()
         {
-            string json = File.ReadAllText(filePath);
-            return ParseJson(json);
+            try
+            {
+                string json = File.ReadAllText(filePath);
+                return ParseJson(json);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Invalid data. Check your input and try again.");
+                return new Dictionary<string, object>(); // Возвращаем пустой словарь в случае ошибки
+            }
         }
 
         private Dictionary<string, object> ParseJson(string json)

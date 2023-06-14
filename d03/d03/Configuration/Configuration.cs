@@ -9,7 +9,7 @@ namespace d03.Configuration
 {
     internal class Configuration
     {
-        public Dictionary<string, object> Params;
+        public Dictionary<string, object>? Params;
 
         public Configuration(IConfigurationSource source)
         {

@@ -15,41 +15,49 @@ namespace d03.Sources
             this.filePath = filePath;
         }
 
-        public Dictionary<string, object> LoadParameters()
+        public Dictionary<string, object>? LoadParameters()
         {
-            var parameters = new Dictionary<string, object>();
-
-            using (var reader = new StreamReader(filePath))
+            try
             {
-                string line;
-                string currentKey = null;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    if (line.Trim().StartsWith("#"))
-                    {
-                        // Пропускаем комментарии
-                        continue;
-                    }
+                var parameters = new Dictionary<string, object>();
 
-                    if (line.Contains(":"))
+                using (var reader = new StreamReader(filePath))
+                {
+                    string line;
+                    string currentKey = null;
+                    while ((line = reader.ReadLine()) != null)
                     {
-                        var parts = line.Split(":");
-                        if (parts.Length == 2)
+                        if (line.Trim().StartsWith("#"))
                         {
-                            currentKey = parts[0].Trim();
-                            var value = parts[1].Trim();
-                            parameters[currentKey] = value;
+                            // Пропускаем комментарии
+                            continue;
+                        }
+
+                        if (line.Contains(":"))
+                        {
+                            var parts = line.Split(":");
+                            if (parts.Length == 2)
+                            {
+                                currentKey = parts[0].Trim();
+                                var value = parts[1].Trim();
+                                parameters[currentKey] = value;
+                            }
+                        }
+                        else if (!string.IsNullOrWhiteSpace(currentKey))
+                        {
+                            // Продолжаем добавлять значения для предыдущего ключа
+                            parameters[currentKey] += line.Trim();
                         }
                     }
-                    else if (!string.IsNullOrWhiteSpace(currentKey))
-                    {
-                        // Продолжаем добавлять значения для предыдущего ключа
-                        parameters[currentKey] += line.Trim();
-                    }
                 }
-            }
 
-            return parameters;
+                return parameters;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Invalid data. Check your input and try again.");
+                return new Dictionary<string, object>(); // Возвращаем пустой словарь в случае ошибки
+            }
         }
     }
 }
