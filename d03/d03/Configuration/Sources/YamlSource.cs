@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace d03.Sources
             this.filePath = filePath;
         }
 
-        public Dictionary<string, object>? LoadParameters()
+        public Dictionary<string, object> LoadParameters()
         {
             try
             {
@@ -53,7 +54,7 @@ namespace d03.Sources
 
                 return parameters;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine("Invalid data. Check your input and try again.");
                 return new Dictionary<string, object>(); // Возвращаем пустой словарь в случае ошибки

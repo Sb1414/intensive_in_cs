@@ -1,11 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System;
+using System.IO;
 using d03.Configuration;
 using d03.Sources;
 
 if (args.Length < 1)
 {
-    Console.WriteLine("Путь к файлу не указан.");
+    Console.WriteLine("Input error. Check the input data and repeat the request.");
     return;
 }
 
@@ -23,13 +25,13 @@ else if (extension.Equals(".yml", StringComparison.OrdinalIgnoreCase) || extensi
 }
 else
 {
-    Console.WriteLine("Неподдерживаемый формат файла.");
+    Console.WriteLine("Invalid data. Check your input and try again.");
     return;
 }
 
 var configuration = new Configuration(source);
 
-if (configuration != null)
+if (configuration.Params != null)
 {
     int i = 0;
     foreach (var parameter in configuration.Params)

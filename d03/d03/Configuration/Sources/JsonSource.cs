@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -10,20 +11,19 @@ namespace d03.Sources
     internal class JsonSource : IConfigurationSource
     {
         private string filePath;
-
         public JsonSource(string filePath)
         {
             this.filePath = filePath;
         }
 
-        public Dictionary<string, object>? LoadParameters()
+        public Dictionary<string, object> LoadParameters()
         {
             try
             {
                 string json = File.ReadAllText(filePath);
                 return ParseJson(json);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine("Invalid data. Check your input and try again.");
                 return new Dictionary<string, object>(); // Возвращаем пустой словарь в случае ошибки
