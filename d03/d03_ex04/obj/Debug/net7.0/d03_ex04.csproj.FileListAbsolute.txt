@@ -1,0 +1,15 @@
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/bin/Debug/net7.0/d03_ex04
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/bin/Debug/net7.0/d03_ex04.deps.json
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/bin/Debug/net7.0/d03_ex04.runtimeconfig.json
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/bin/Debug/net7.0/d03_ex04.dll
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/bin/Debug/net7.0/d03_ex04.pdb
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/obj/Debug/net7.0/d03_ex04.csproj.AssemblyReference.cache
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/obj/Debug/net7.0/d03_ex04.GeneratedMSBuildEditorConfig.editorconfig
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/obj/Debug/net7.0/d03_ex04.AssemblyInfoInputs.cache
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/obj/Debug/net7.0/d03_ex04.AssemblyInfo.cs
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/obj/Debug/net7.0/d03_ex04.csproj.CoreCompileInputs.cache
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/obj/Debug/net7.0/d03_ex04.dll
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/obj/Debug/net7.0/refint/d03_ex04.dll
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/obj/Debug/net7.0/d03_ex04.pdb
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/obj/Debug/net7.0/d03_ex04.genruntimeconfig.cache
+/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/obj/Debug/net7.0/ref/d03_ex04.dll

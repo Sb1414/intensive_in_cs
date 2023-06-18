@@ -1,0 +1,66 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net7.0": []
+  },
+  "packageFolders": {
+    "/Users/evetteis/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/d03_ex04.csproj",
+      "projectName": "d03_ex04",
+      "projectPath": "/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/d03_ex04.csproj",
+      "packagesPath": "/Users/evetteis/.nuget/packages/",
+      "outputPath": "/opt/goinfre/evetteis/Bootcamp_c_charp/C_sharp_Day03-1/src/d_03/d03_ex04/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/evetteis/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
