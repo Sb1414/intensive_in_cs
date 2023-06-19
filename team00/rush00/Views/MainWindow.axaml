@@ -9,19 +9,26 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="Set new habit to track" Width="800" Height="450">
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20">
-        <TextBlock Text="Set a habit to track" Margin="0 0 0 10"/>
-        <TextBox x:Name="TitleTextBox" Width="400" Margin="0 0 0 10"/>
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20">
+            <TextBlock Text="Set a habit to track" Margin="0 0 0 10"/>
+            <TextBox Text="{Binding HabitTitle, Mode=TwoWay}" Width="400" Margin="0 0 0 10"/>
 
-        <TextBlock Text="What would be a motivation" Margin="0 0 0 10"/>
-        <TextBox x:Name="MotivationTextBox" Width="400" Margin="0 0 0 10"/>
+            <TextBlock Text="What would be a motivation" Margin="0 0 0 10"/>
+            <TextBox Text="{Binding Motivation, Mode=TwoWay}" Width="400" Margin="0 0 0 10"/>
 
-        <TextBlock Text="When will you start" Margin="0 0 0 10"/>
-        <DatePicker x:Name="StartDatePicker" Width="400" Margin="0 0 0 10"/>
+            <TextBlock Text="When will you start" Margin="0 0 0 10"/>
+            <DatePicker SelectedDate="{Binding StartDate}" Width="400" Margin="0 0 0 10"/>
        
-        <TextBlock Text="How many days you want to challenge yourself for" Margin="0 0 0 10"/>
-        <NumericUpDown x:Name="DaysToChallenge" Width="400" Margin="0 0 0 10" Value="1"/>
+            <TextBlock Text="How many days you want to challenge yourself for" Margin="0 0 0 10"/>
+            <NumericUpDown Value="{Binding NumberOfDays, Mode=TwoWay}" Width="400" Margin="0 0 0 10"/>
 
-        <Button Content="Start" Width="100" Click="StartButton_Click" Margin="0 10 0 0"/>
-    </StackPanel>
+            <Button Content="Start" Width="100" Margin="0 10 0 0" Command="{Binding StartCommand}"/>
+        </StackPanel>
+
+    </Grid>
 </Window>

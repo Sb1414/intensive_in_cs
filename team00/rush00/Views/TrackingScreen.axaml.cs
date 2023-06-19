@@ -9,78 +9,37 @@ namespace rush00.Views;
 
 public partial class TrackingScreen : Window
 {
-   private StackPanel daysStackPanel;
-        private Button finishButton;
-        private Habit habit;
+    private Habit habit;
 
-        public TrackingScreen(Habit habit)
-        {
-            this.habit = habit;
-            InitializeComponent();
-            daysStackPanel = this.FindControl<StackPanel>("DaysStackPanel");
-            finishButton = this.FindControl<Button>("FinishButton");
-            PopulateDays();
-        }
-        
-        public TrackingScreen() // Добавлен публичный конструктор без параметров
-        {
-            InitializeComponent();
-        }
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
+    public TrackingScreen(Habit habit)
+    {
+        this.habit = habit;
+        InitializeComponent();
+    }
 
-        private void PopulateDays()
+    public TrackingScreen()
+    {
+        InitializeComponent();
+    }
+
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
+    }
+
+    public void FinishButton_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        bool isFinished = true;
+        foreach (var dayCheck in habit.DaysList)
         {
-            foreach (var dayCheck in habit.DaysList)
+            if (!dayCheck.IsChecked)
             {
-                CheckBox checkBox = new CheckBox
-                {
-                    Content = dayCheck.CurrentDate.ToString("dd/MM/yyyy"),
-                    IsChecked = dayCheck.IsChecked
-                };
-                checkBox.Checked += CheckBox_Checked;
-                daysStackPanel.Children.Add(checkBox);
+                isFinished = false;
+                break;
             }
         }
-
-        private void CheckBox_Checked(object sender, Avalonia.Interactivity.RoutedEventArgs e)
-        {
-            CheckBox checkBox = (CheckBox)sender;
-            string dateString = checkBox.Content.ToString();
-            DateTime date = DateTime.ParseExact(dateString, "dd/MM/yyyy", null);
-            bool isChecked = checkBox.IsChecked.Value;
-            UpdateHabitCheck(date, isChecked);
-        }
-
-        private void UpdateHabitCheck(DateTime date, bool isChecked)
-        {
-            foreach (var dayCheck in habit.DaysList)
-            {
-                if (dayCheck.CurrentDate.Date == date.Date)
-                {
-                    dayCheck.IsChecked = isChecked;
-                    break;
-                }
-            }
-        }
-
-        public void FinishButton_Click(object sender, RoutedEventArgs e)
-        {
-            bool isFinished = true;
-            foreach (var dayCheck in habit.DaysList)
-            {
-                if (!dayCheck.IsChecked)
-                {
-                    isFinished = false;
-                    break;
-                }
-            }
-            habit.IsFinished = isFinished;
-
-            // Perform necessary actions to finish tracking
-
-            this.Close();
-        } 
+        habit.IsFinished = isFinished;
+        // TODO: Save habit or perform other actions
+        this.Close();
+    }
 }
