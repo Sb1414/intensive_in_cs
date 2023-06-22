@@ -5,6 +5,8 @@ using d05.Nasa.Apod;
 using d05.Nasa.Apod.Models;
 using d05.Nasa.Earth;
 using d05.Nasa.Earth.Models;
+using d05.Nasa.Mars;
+using d05.Nasa.Mars.Models;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -46,4 +48,20 @@ if (args[0] == "apod")
     {
         Console.WriteLine("No results found.");
     }
+} else if (args[0] == "mars")
+{
+    if (!int.TryParse(args[1], out int n)) n = 0;
+    INasaClient<int, Task<MediaOfTodayMars[][]>> ad_astra = new MarsClient(configuration["ApiKey"]);
+    var result = await ad_astra.GetAsync(n);
+    foreach (var mediaOfTodayArray in result)
+    {
+        foreach (var mediaOfToday in mediaOfTodayArray)
+        {
+            Console.WriteLine($"{mediaOfToday.ToString()}");
+        }
+    }
+}
+else
+{
+    Console.WriteLine($"Incorrect input");
 }
