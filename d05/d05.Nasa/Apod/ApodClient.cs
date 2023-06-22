@@ -1,3 +1,4 @@
+using System.Net;
 using System.Text.Json;
 using d05.Nasa.Apod.Models;
 
@@ -21,7 +22,7 @@ public class ApodClient : INasaClient<int, Task<MediaOfToday[]>>
             string apiUrl = $"https://api.nasa.gov/planetary/apod?api_key={apiKey}&count={count}";
             var response = await httpClient.GetAsync(apiUrl);
 
-            if (response.IsSuccessStatusCode)
+            if (response.StatusCode == HttpStatusCode.OK)
             {
                 string responseContent = await response.Content.ReadAsStringAsync();
                 var mediaOfTodayList = JsonSerializer.Deserialize<List<MediaOfToday>>(responseContent);
