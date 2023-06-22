@@ -20,15 +20,12 @@ public class EarthClient : INasaClient<EarthRequest, Task<MediaOfTodayEarth[]>>
         try
         {
             string apiUrl = $"https://api.nasa.gov/planetary/earth/assets?lon={request.Longitude}&lat={request.Latitude}&date={request.Date.ToString("yyyy-MM-dd")}&&dim={request.Dimensions}&api_key={apiKey}";
-            // https://api.nasa.gov/planetary/earth/assets?lon=-95,33&lat=29,78&date=2018-01-01&dim=0,1&api_key=aUefrscvDf536ydo8OQP7F2zkmFPx2ezVK7N1dFg
-            // https://api.nasa.gov/planetary/earth/assets?lon=-95.33&lat=29.78&date=2018-01-01&&dim=0.10&api_key=aUefrscvDf536ydo8OQP7F2zkmFPx2ezVK7N1dFg
             var response = await httpClient.GetAsync(apiUrl);
 
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 string responseContent = await response.Content.ReadAsStringAsync();
-                // Console.WriteLine(responseContent); // Выводим содержимое ответа на консоль
-                
+                // Console.WriteLine(responseContent);
                 var mediaOfToday = JsonSerializer.Deserialize<MediaOfTodayEarth>(responseContent);
                 return new MediaOfTodayEarth[] { mediaOfToday };
             }
