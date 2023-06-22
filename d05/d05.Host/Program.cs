@@ -3,59 +3,47 @@
 using d05.Nasa;
 using d05.Nasa.Apod;
 using d05.Nasa.Apod.Models;
+using d05.Nasa.Earth;
+using d05.Nasa.Earth.Models;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
-// if (args.Length < 2)
-// {
-//     Console.WriteLine("Usage: dotnet run <apiKey> <count>");
-//     return;
-// }
-//
-// string apiKey = args[0];
-// int count = int.Parse(args[1]);
-//
-// var apodClient = new ApodClient(apiKey);
-// var mediaOfTodayArray = await apodClient.GetAsync(count);
-//
-// if (mediaOfTodayArray != null)
-// {
-//     foreach (var mediaOfToday in mediaOfTodayArray)
-//     {
-//         Console.WriteLine($"{mediaOfToday.Date}\n'{mediaOfToday.Title}' by {mediaOfToday.Copyright}");
-//         Console.WriteLine(mediaOfToday.Explanation);
-//         Console.WriteLine(mediaOfToday.Url);
-//         Console.WriteLine();
-//     }
-// }
-// else
-// {
-//     Console.WriteLine("Failed to retrieve data from NASA API.");
-// }
+string currentDirectory = Directory.GetCurrentDirectory();
+string appSettingsPath = Path.Combine(currentDirectory, "appsettings.json");
 
-if (args.Length < 2)
+ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
+configurationBuilder
+    .AddJsonFile(appSettingsPath);
+var configuration = configurationBuilder.Build();
+
+if (args[0] == "apod")
 {
-    Console.WriteLine("Usage: dotnet run <apiKey> <count>");
-    return;
-}
-
-string apiKey = args[0];
-int count = int.Parse(args[1]);
-
-var apodClient = new ApodClient(apiKey);
-var mediaOfTodayArray = await apodClient.GetAsync(count);
-
-if (mediaOfTodayArray != null)
-{
-    foreach (var mediaOfToday in mediaOfTodayArray)
+    if (!int.TryParse(args[1], out int n)) n = 0;
+    INasaClient<int, Task<MediaOfToday[]>> ad_astra = new ApodClient(configuration["ApiKey"]);
+    var result = await ad_astra.GetAsync(n);
+    foreach (var mediaOfToday in result)
     {
-        // Console.WriteLine($"{mediaOfToday.Date}\n'{mediaOfToday.Title}' by {mediaOfToday.Copyright}");
-        // Console.WriteLine(mediaOfToday.Explanation);
-        // Console.WriteLine(mediaOfToday.Url);
-        // Console.WriteLine();
-        Console.WriteLine(mediaOfToday.ToString());
+        Console.WriteLine($"{mediaOfToday.ToString()}");
     }
-}
-else
+} else if (args[0] == "earth")
 {
-    Console.WriteLine("Failed to retrieve data from NASA API.");
+    INasaClient<EarthRequest, Task<MediaOfTodayEarth[]>> ad_astra = new EarthClient(configuration["ApiKey"]);
+    EarthRequest request = new EarthRequest
+    {
+        Latitude = "29.78", Longitude = "-95.33", Date = DateTime.Parse("2018-01-01"), Dimensions = "0.10"
+    };
+
+    var result = await ad_astra.GetAsync(request);
+    if (result != null && result.Length > 0)
+    {
+        foreach (var mediaOfToday in result)
+        {
+            Console.WriteLine(mediaOfToday.ToString());
+        }
+    }
+    else
+    {
+        Console.WriteLine("No results found.");
+    }
 }
