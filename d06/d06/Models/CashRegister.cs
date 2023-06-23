@@ -1,4 +1,5 @@
-﻿using System.Collections.Concurrent;
+﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 
 namespace d06.Models;
@@ -45,17 +46,16 @@ public class CashRegister
         Customer customer;
         while (QueuedCustomers.TryDequeue(out customer))
         {
-            var customerProcessingTime = customer.ItemsInCart * ProcessingTimePerItem;
+            var customerProcessingTime = customer.ItemsInCart * new Random().Next(1, ProcessingTimePerItem + 1); // ex Bonus
             TotalProcessingTime += customerProcessingTime;
-            SuccessfulCustomerCount++; // Увеличение счетчика успешно обработанных покупателей
+            SuccessfulCustomerCount++;
 
             System.Threading.Thread.Sleep(customerProcessingTime * 1000);
 
             System.Threading.Thread.Sleep(CustomerSwitchingTime * 1000);
 
-            customer.ItemsInCart = 0; // Обнуление ItemsInCart после обработки
-
-            SuccessfulCustomers.Add(customer); // Добавление клиента в список успешно обработанных клиентов
+            customer.ItemsInCart = 0;
+            SuccessfulCustomers.Add(customer);
         }
     }
     public override string ToString()

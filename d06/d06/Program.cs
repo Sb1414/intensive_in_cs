@@ -21,8 +21,8 @@ configurationBuilder
     .AddJsonFile(appSettingsPath);
 var conf = configurationBuilder.Build();
 
-if (!int.TryParse(conf["ProcessingTimePerItem"], out var processingTimePerItem)
-    || !int.TryParse(conf["CustomerSwitchingTime"], out var customerSwitchingTime))
+if (!int.TryParse(conf["timePerItem"], out var processingTimePerItem)
+    || !int.TryParse(conf["timePerCustomer"], out var customerSwitchingTime))
 {
     Console.WriteLine("Wrong \"appsettings.json\" file parameters");
     return;
@@ -79,8 +79,18 @@ Parallel.ForEach(customersEx3, customer =>
     }
 });
 
+// среднее время обработки запросов клиентов для каждой кассы
+foreach (var register in shop.Registers)
+{
+    double averageProcessingTime = register.SuccessfulCustomers.Count > 0
+        ? register.TotalProcessingTime / (double)register.SuccessfulCustomers.Count : 0;
+    Console.WriteLine($"Register #{register.No}: Average processing time per customer: {averageProcessingTime} seconds");
+}
+
+
 
 Console.WriteLine("\n================ ex04 =========================\n");
+Console.WriteLine($"1) GetInLineByPeople: ");
 const int newCustomerInterval = 1; // новый покупатель появляется каждые 7 секунд
 
 var shopEx4 = new Store(4, 50, processingTimePerItem, customerSwitchingTime);
@@ -105,7 +115,7 @@ Parallel.ForEach(customersEx4, customer =>
         Thread.Sleep(customer.ItemsInCart * processingTimePerItem * 1000);
         
         stopwatch.Stop();
-        Console.WriteLine("\n");
+        // Console.WriteLine("\n");
         Console.WriteLine($"Processed: {register} - {customer}, Items: {customer.ItemsInCart}, Customers in Queue: {register.QueuedCustomers.Count}");
 
         register.QueuedCustomers.Clear();
@@ -120,13 +130,45 @@ Parallel.ForEach(customersEx4, customer =>
 });
 
 Console.WriteLine("Opening registers...");
-shop.OpenRegisters();
+shopEx4.OpenRegisters();
 
-// среднее время обработки запросов клиентов для каждой кассы
-foreach (var register in shop.Registers)
+Console.WriteLine($"2) GetInLineByItems: ");
+
+var shopEx4_ = new Store(4, 50, processingTimePerItem, customerSwitchingTime);
+var customersEx4_ = Enumerable.Range(1, 10)
+    .Select(x => new Customer(x))
+    .ToArray();
+
+var stopwatch_ = new Stopwatch();
+
+Console.WriteLine("Lines by people count:");
+Parallel.ForEach(customersEx4_, customer =>
 {
-    double averageProcessingTime = register.SuccessfulCustomers.Count > 0
-        ? register.TotalProcessingTime / (double)register.SuccessfulCustomers.Count
-        : 0;
-    Console.WriteLine($"Register #{register.No}: Average processing time per customer: {averageProcessingTime} seconds");
-}
+    customer.FillCart(cartCapacity);
+
+    if (customer.ItemsInCart <= shopEx4_.Storage.ItemsInStorage && shopEx4_.Storage.TakeItemsFromStorage(customer.ItemsInCart))
+    {
+        var register = customer.GetInLineByItems(shopEx4_.Registers);
+        Console.WriteLine($"{customer} to {register}");
+
+        stopwatch_.Start();
+
+        Thread.Sleep(customer.ItemsInCart * processingTimePerItem * 1000);
+        
+        stopwatch_.Stop();
+        Console.WriteLine($"Processed: {register} - {customer}, Items: {customer.ItemsInCart}, Customers in Queue: {register.QueuedCustomers.Count}");
+
+        register.QueuedCustomers.Clear();
+    }
+    else
+    {
+        Console.WriteLine($"{customer} leaves the store");
+    }
+
+    // время между клиентами
+    Thread.Sleep(newCustomerInterval * 1000);
+});
+
+
+Console.WriteLine("Opening registers...");
+shopEx4_.OpenRegisters();
