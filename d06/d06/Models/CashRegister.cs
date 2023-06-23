@@ -12,6 +12,10 @@ public class CashRegister
     public int ProcessingTimePerItem { get; set; }
     public int CustomerSwitchingTime { get; set; }
     public int TotalProcessingTime { get; private set; }
+    public int SuccessfulCustomerCount { get; private set; }
+    public List<Customer> SuccessfulCustomers { get; }
+
+
         
     public CashRegister(int number, int processingTimePerItem, int customerSwitchingTime)
     {
@@ -21,6 +25,7 @@ public class CashRegister
         ProcessingTimePerItem = processingTimePerItem;
         CustomerSwitchingTime = customerSwitchingTime;
         TotalProcessingTime = 0;
+        SuccessfulCustomers = new List<Customer>();
     }
 
     public void Process()
@@ -30,20 +35,27 @@ public class CashRegister
         //     var customer = QueuedCustomers.Dequeue();
         //     var customerProcessingTime = customer.ItemsInCart * ProcessingTimePerItem;
         //     TotalProcessingTime += customerProcessingTime;
+        //     SuccessfulCustomerCount++;
         //
         //     System.Threading.Thread.Sleep(customerProcessingTime * 1000);
         //
         //     System.Threading.Thread.Sleep(CustomerSwitchingTime * 1000);
+        //     customer.ItemsInCart = 0;
         // }
         Customer customer;
         while (QueuedCustomers.TryDequeue(out customer))
         {
             var customerProcessingTime = customer.ItemsInCart * ProcessingTimePerItem;
             TotalProcessingTime += customerProcessingTime;
+            SuccessfulCustomerCount++; // Увеличение счетчика успешно обработанных покупателей
 
             System.Threading.Thread.Sleep(customerProcessingTime * 1000);
 
             System.Threading.Thread.Sleep(CustomerSwitchingTime * 1000);
+
+            customer.ItemsInCart = 0; // Обнуление ItemsInCart после обработки
+
+            SuccessfulCustomers.Add(customer); // Добавление клиента в список успешно обработанных клиентов
         }
     }
     public override string ToString()
