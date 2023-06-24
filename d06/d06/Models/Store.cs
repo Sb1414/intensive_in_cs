@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace d06.Models;
 
@@ -22,17 +23,20 @@ public class Store
     
     public void OpenRegisters()
     {
-        var registerThreads = Registers.Select(register => new Thread(() => ProcessRegister(register))).ToList();
+        // var registerThreads = Registers.Select(register => new Thread(() => ProcessRegister(register))).ToList();
+        var registerTasks = Registers.AsParallel()
+            .Select(register => Task.Run(() => ProcessRegister(register)));
 
-        foreach (var thread in registerThreads)
-        {
-            thread.Start();
-        }
-
-        foreach (var thread in registerThreads)
-        {
-            thread.Join();
-        }
+        Task.WaitAll(registerTasks.ToArray());
+        // foreach (var thread in registerThreads)
+        // {
+        //     thread.Start();
+        // }
+        //
+        // foreach (var thread in registerThreads)
+        // {
+        //     thread.Join();
+        // }
     }
 
     private void ProcessRegister(CashRegister register) // для наглядности
