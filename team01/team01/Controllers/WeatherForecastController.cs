@@ -2,11 +2,12 @@ using System;
 using System.Net.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using team01.WeatherClient.Models;
+using team01.WeatherRequests.Models;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using team01.WeatherRequests;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace team01.Controllers;
@@ -14,16 +15,17 @@ namespace team01.Controllers;
 [ApiController]
 [Route("[controller]")]
 [Produces("application/json")]
-public class WeatherForecastController : ControllerBase
+public class  WeatherForecastController : ControllerBase
 {
-    private readonly HttpClient _httpClient;
-    
     private readonly ILogger<WeatherForecastController> _logger;
+    private readonly IConfiguration _configuration;
+    private readonly WeatherClient _weatherClient;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IConfiguration configuration)//, WeatherClient client)
     {
         _logger = logger;
-        _httpClient = new HttpClient();
+        _configuration = configuration;
+        _weatherClient = new WeatherClient(configuration); //client;
     }
 
     // public WeatherForecastController(IHttpClientFactory httpClientFactory)
@@ -67,32 +69,14 @@ public class WeatherForecastController : ControllerBase
     {
         try
         {
-            string apiKey = "56244f2c5dc59917ec979904982eca82";
-            string apiUrl = $"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={apiKey}&units=metric";
-            
-            HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
-            string json = await response.Content.ReadAsStringAsync();
-            if (!response.IsSuccessStatusCode)
-                throw new Exception($"GET {apiUrl} - {response.StatusCode}\n{json}");
-
-            var weatherData = JsonConvert.DeserializeObject<WeatherForecast>(json);
-
-            var weatherResponse = new WeatherForecast
-            {
-                Wind = new Wind { Speed = weatherData.Wind.Speed },
-                Weather = new List<Weather> { new Weather { Description = weatherData.Weather[0].Description } },
-                Main = new MainInfo { Temp = weatherData.Main.Temp, Pressure = weatherData.Main.Pressure, Humidity = weatherData.Main.Humidity },
-                Name = weatherData.Name
-            };
-
-            return Ok(weatherResponse);
+            return Ok(await _weatherClient.GetWeatherByCoordinates(latitude,  longitude));
         }
         catch
         {
             return BadRequest();
         }
     }
-    
+
     /// <summary>
     /// Get weather forecast for the specified city.
     /// </summary>
@@ -107,25 +91,7 @@ public class WeatherForecastController : ControllerBase
     {
         try
         {
-            string apiKey = "56244f2c5dc59917ec979904982eca82";
-            string apiUrl = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={apiKey}&units=metric";
-
-            HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
-            string json = await response.Content.ReadAsStringAsync();
-            if (!response.IsSuccessStatusCode)
-                throw new Exception($"GET {apiUrl} - {response.StatusCode}\n{json}");
-
-            var weatherData = JsonConvert.DeserializeObject<WeatherForecast>(json);
-
-            var weatherResponse = new WeatherForecast
-            {
-                Wind = new Wind { Speed = weatherData.Wind.Speed },
-                Weather = new List<Weather> { new Weather { Description = weatherData.Weather[0].Description } },
-                Main = new MainInfo { Temp = weatherData.Main.Temp, Pressure = weatherData.Main.Pressure, Humidity = weatherData.Main.Humidity },
-                Name = weatherData.Name
-            };
-
-            return Ok(weatherResponse);
+            return Ok(await _weatherClient.GetWeatherByCity(cityName));
         }
         catch
         {
