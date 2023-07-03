@@ -6,9 +6,10 @@ try
 {
     string currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
-    // Удаление последних 16 символов из строки filePath для Visual Studio
-    currentDirectory = currentDirectory.Substring(0, currentDirectory.Length - 16);
-    string filePath = Path.Combine(currentDirectory, @"names.txt");
+    currentDirectory = currentDirectory.Substring(0, currentDirectory.Length - 39);
+    // string filePath = Path.Combine(currentDirectory, @"materials\us_names.txt"); // для винды
+    string filePath = Path.Combine(currentDirectory, @"materials/us_names.txt"); // для мака
+    Console.WriteLine(currentDirectory + "\n" + filePath);
 
     string[] names = LoadNamesFromFile(filePath); // Загрузка списка имен из файла
 
