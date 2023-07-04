@@ -34,7 +34,7 @@ namespace d04.Model
         }
     }
 
-    public class RootObject
+    public class RootObjectBookReview
     {
         [JsonPropertyName("results")]
         public BookResult[] Results { get; set; }
