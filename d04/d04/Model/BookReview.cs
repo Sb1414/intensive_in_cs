@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace d04.Model
 {
 
-    public class BookReview
+    public class BookReview : ISearchable
     {
         [JsonPropertyName("title")]
         public string Title { get; set; }
@@ -32,6 +32,8 @@ namespace d04.Model
         {
             return $"{Title} by {Author} [{Rank} on NYT’s {ListName}]\n{SummaryShort}\n{Url}";
         }
+
+        string ISearchable.Title => Title;
     }
 
     public class RootObjectBookReview

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace d04.Model
 {
-    public class MovieReview
+    public class MovieReview : ISearchable
     {
         [JsonPropertyName("title")]
         public string Title { get; set; }
@@ -25,6 +25,8 @@ namespace d04.Model
         {
             return $"{Title} {(CriticsPick == 1 ? "[NYT critic’s pick]" : "")}\n{SummaryShort}\n{Link.Url}";
         }
+
+        string ISearchable.Title => Title;
     }
 
     public class ReviewLink
