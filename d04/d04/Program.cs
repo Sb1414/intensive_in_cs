@@ -129,7 +129,7 @@ void ex02()
 
     if (searchResult.Length == 0)
     {
-        Console.WriteLine($"Not found");
+        Console.WriteLine($"There are no \"{searchText}” in media today.");
     }
     else
     {
