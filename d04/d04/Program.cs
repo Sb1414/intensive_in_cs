@@ -1,11 +1,22 @@
 ﻿using d04.Model;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using System.Reflection;
 using System.Text.Json;
 
-string currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+string currentDirectory = Directory.GetCurrentDirectory();
+string appSettingsPath = Path.Combine(currentDirectory, "appsettings.json");
 
-string currentDirectory2 = currentDirectory.Substring(0, currentDirectory.Length - 16);
+Console.WriteLine(appSettingsPath + " <===");
+
+IConfiguration configuration = new ConfigurationBuilder()
+        .AddJsonFile(appSettingsPath, optional: true, reloadOnChange: true)
+        .Build();
+
+// Получение путей к файлам из конфигурации
+string bookReviewsFilePath = configuration.GetSection("BookReviews").Value;
+string movieReviewsFilePath = configuration.GetSection("MovieReviews").Value;
+
 
 if (args.Length > 0 && args[0] == "best")
 {
@@ -60,10 +71,7 @@ RootObjectMovieReview data;
 
 void ex00()
 {
-    string filePath = currentDirectory2 + "book_reviews.json"; // для винды
-    // string filePath = "book_reviews.json"; // для мака
-
-    string json = File.ReadAllText(filePath);
+    string json = File.ReadAllText(bookReviewsFilePath);
 
     // Десериализация JSON в объекты
     RootObjectBookReview data_ = JsonSerializer.Deserialize<RootObjectBookReview>(json);
@@ -99,10 +107,7 @@ void print_ex00()
 
 void ex01()
 {
-    string filePath = currentDirectory2 + "movie_reviews.json"; // для винды
-    // string filePath = "book_reviews.json"; // для мака
-
-    string json = File.ReadAllText(filePath);
+    string json = File.ReadAllText(movieReviewsFilePath);
 
     // Десериализация JSON в объекты
     data = JsonSerializer.Deserialize<RootObjectMovieReview>(json);
