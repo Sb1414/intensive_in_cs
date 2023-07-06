@@ -7,41 +7,51 @@ string currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().
 
 string currentDirectory2 = currentDirectory.Substring(0, currentDirectory.Length - 16);
 
-bool fl = true;
-while (fl)
+if (args.Length > 0 && args[0] == "best")
 {
-    menu();
-    string input = Console.ReadLine();
-    int num;
-    if (int.TryParse(input, out num))
+    draw();
+    exBest();
+    draw();
+}
+else
+{
+
+    bool fl = true;
+    while (fl)
     {
-        switch (num)
+        menu();
+        string input = Console.ReadLine();
+        int num;
+        if (int.TryParse(input, out num))
         {
-            case 0:
-                draw();
-                ex00();
-                print_ex00();
-                draw();
-                break;
-            case 1:
-                draw();
-                ex01();
-                print_ex01();
-                draw();
-                break;
-            case 2:
-                draw();
-                ex02();
-                draw();
-                break;
-            default:
-                fl = false;
-                break;
-        } 
-    }
-    else
-    {
-        Console.WriteLine("Некорректный ввод");
+            switch (num)
+            {
+                case 0:
+                    draw();
+                    ex00();
+                    print_ex00();
+                    draw();
+                    break;
+                case 1:
+                    draw();
+                    ex01();
+                    print_ex01();
+                    draw();
+                    break;
+                case 2:
+                    draw();
+                    ex02();
+                    draw();
+                    break;
+                default:
+                    fl = false;
+                    break;
+            }
+        }
+        else
+        {
+            Console.WriteLine("Некорректный ввод");
+        }
     }
 }
 
@@ -152,6 +162,26 @@ void ex02()
     }
 }
 
+void exBest()
+{
+    ex00();
+    ex01();
+    BookReview bestBook;
+    MovieReview bestMovieReview;
+    
+    bestBook = bookReviews.FirstOrDefault();
+
+    bestMovieReview = data.Results.FirstOrDefault(movie => movie.CriticsPick == 1);
+
+    Console.WriteLine("Best in books:");
+    Console.WriteLine($"- {bestBook}");
+    Console.WriteLine();
+
+    Console.WriteLine("Best in movie reviews:");
+    Console.WriteLine($"- {bestMovieReview}");
+    Console.WriteLine();
+}
+
 
 void menu()
 {
@@ -159,7 +189,6 @@ void menu()
     Console.WriteLine("0. ex00");
     Console.WriteLine("1. ex01");
     Console.WriteLine("2. ex02");
-    Console.WriteLine("3. ex03");
 }
 
 void draw()
