@@ -1,0 +1,2565 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style data-emotion="css-global" data-s=""></style>
+  <style data-emotion="css-global" data-s=""></style>
+  <style data-emotion="css-global" data-s=""></style>
+  <style data-emotion="css" data-s=""></style>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js',
+        "clickNotifications": "click_notifications"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=&gtm_preview=&gtm_cookies_win=x';
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KQ8HBZ2');
+  </script>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    .spinner {
+      animation: rotate 2s linear infinite;
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -25px 0 0 -25px;
+      width: 50px;
+      height: 50px;
+    }
+    
+    .spinner .path {
+      stroke: #861be3;
+      stroke-linecap: round;
+      animation: dash 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes dash {
+      0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+      }
+      100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+      }
+    }
+  </style>
+  <script type="module" crossorigin="" src="./d02_files/index.fd48e79b.js.Без названия"></script>
+  <script type="module">try{import("_").catch(()=>1);}catch(e){}window.__vite_is_dynamic_import_support=true;</script>
+  <script type="module">!function(){if(window.__vite_is_dynamic_import_support)return;console.warn("vite: loading legacy build because dynamic import is unsupported, syntax error above should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1334 .MuiBadge-dot {
+      height: 6px;
+      min-width: 6px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1245 {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .jss1246 {
+      font-size: 36px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 42px;
+    }
+    
+    .jss1247 {
+      font-size: 24px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 800;
+      line-height: 30px;
+    }
+    
+    .jss1248 {
+      font-size: 22px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 30px;
+    }
+    
+    .jss1249 {
+      font-size: 18px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 800;
+      line-height: 24px;
+    }
+    
+    .jss1250 {
+      font-size: 16px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 24px;
+    }
+    
+    .jss1251 {
+      font-size: 36px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 42px;
+    }
+    
+    .jss1252 {
+      font-size: 18px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    
+    .jss1253 {
+      font-size: 14px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    
+    .jss1254 {
+      font-size: 12px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 18px;
+    }
+    
+    .jss1255 {
+      font-size: 10px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 14px;
+    }
+    
+    .jss1256 {
+      font-size: 20px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 22px;
+    }
+    
+    .jss1257 {
+      font-size: 18px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 22px;
+    }
+    
+    .jss1258 {
+      font-size: 14px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 20px;
+    }
+    
+    .jss1259 {
+      font-size: 12px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 18px;
+    }
+    
+    .jss1260 {
+      font-size: 24px;
+      font-style: normal;
+      font-family: "Press Start 2P";
+      font-weight: 400;
+      line-height: 24px;
+    }
+    
+    .jss1261 {
+      font-size: 11px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+    
+    .jss1262 {
+      font-size: 14px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    
+    .jss1263 {
+      color: inherit;
+    }
+    
+    .jss1264 {
+      color: initial;
+    }
+    
+    .jss1265 {
+      color: #44EB99;
+    }
+    
+    .jss1266 {
+      color: #44B496;
+    }
+    
+    .jss1267 {
+      color: #861BE3;
+    }
+    
+    .jss1268 {
+      color: #BA1BFF;
+    }
+    
+    .jss1269 {
+      color: #36C5F0;
+    }
+    
+    .jss1270 {
+      color: #008BFF;
+    }
+    
+    .jss1271 {
+      color: #1A53BC;
+    }
+    
+    .jss1272 {
+      color: #FF4A50;
+    }
+    
+    .jss1273 {
+      color: #FFC540;
+    }
+    
+    .jss1274 {
+      color: #2FE4D3;
+    }
+    
+    .jss1275 {
+      color: #212121;
+    }
+    
+    .jss1276 {
+      color: #ffffff;
+    }
+    
+    .jss1277 {
+      color: #AEBBCA;
+    }
+    
+    .jss1278 {
+      color: #D2D9E1;
+    }
+    
+    .jss1279 {
+      color: #ffffff;
+    }
+    
+    .jss1280 {
+      color: #DDE3E9;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1285 {
+      fill: currentColor;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1335 {
+      cursor: pointer;
+      margin: 0;
+      display: inline-flex;
+      position: relative;
+      min-width: 24px;
+      min-height: 24px;
+      transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      align-items: center;
+      border-radius: 8px;
+      text-transform: none;
+    }
+    
+    .jss1335.Mui-disabled {
+      color: #AEBBCA;
+    }
+    
+    .jss1335 > svg {
+      fill: #ffffff;
+    }
+    
+    .jss1335 >:not(:last-child),
+    .jss1335 .MuiButton-startIcon:not(:last-child) {
+      margin-right: 8px;
+    }
+    
+    .jss1335 .MuiButton-startIcon,
+    .jss1335 .MuiButton-endIcon {
+      margin: 0;
+    }
+    
+    .jss1335.Mui-disabled .jss1346 {
+      color: #AEBBCA;
+    }
+    
+    .jss1336:hover {
+      color: #ffffff;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss1336:active {
+      color: #ffffff;
+      background-color: #BA1BFF;
+    }
+    
+    .jss1336.Mui-disabled {
+      color: #C6CFDA;
+      background-color: #516071;
+    }
+    
+    .jss1336.Mui-disabled .jss1346 {
+      color: #C6CFDA;
+    }
+    
+    .jss1336:active .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1336:hover .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1337:hover {
+      color: #ffffff;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss1337:active {
+      color: #ffffff;
+      background-color: #BA1BFF;
+    }
+    
+    .jss1337.Mui-disabled {
+      color: #C6CFDA;
+      background-color: #516071;
+    }
+    
+    .jss1337.Mui-disabled .jss1346 {
+      color: #C6CFDA;
+    }
+    
+    .jss1337:active .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1337:hover .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1338 {
+      color: #212121;
+    }
+    
+    .jss1338:hover {
+      color: #ffffff;
+      border: 1px solid #A24FEA;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss1338:active {
+      color: #ffffff;
+      border: 1px solid #861BE3;
+      background-color: #BA1BFF;
+    }
+    
+    .jss1338.Mui-disabled {
+      color: #AEBBCA;
+      border: 1px solid #8191A2;
+    }
+    
+    .jss1338.Mui-disabled .jss1346 {
+      color: #AEBBCA;
+    }
+    
+    .jss1338:active .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1338:hover .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1339:hover {
+      color: #ffffff;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss1339:active {
+      color: #ffffff;
+      background-color: #BA1BFF;
+    }
+    
+    .jss1339:active .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1339:hover .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1340:hover {
+      color: #ffffff;
+      border: 1px solid #A24FEA;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss1340:active {
+      color: #ffffff;
+      border: 1px solid #861BE3;
+      background-color: #BA1BFF;
+    }
+    
+    .jss1340.Mui-disabled {
+      color: #AEBBCA;
+      border: 1px solid #8191A2;
+    }
+    
+    .jss1340.Mui-disabled .jss1346 {
+      color: #AEBBCA;
+    }
+    
+    .jss1340:active .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1340:hover .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1335.jss1341 {
+      padding: 0;
+    }
+    
+    .jss1341:hover {
+      color: #A24FEA;
+      background: none;
+    }
+    
+    .jss1341:active {
+      color: #BA1BFF;
+      background: none;
+    }
+    
+    .jss1342:hover {
+      color: #ffffff;
+      background-color: #8191A2;
+    }
+    
+    .jss1342:active {
+      color: #ffffff;
+      background-color: #BA1BFF;
+    }
+    
+    .jss1342:active .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1343 {
+      height: 24px;
+    }
+    
+    .jss1343:hover {
+      color: #ffffff;
+      background-color: #8191A2;
+    }
+    
+    .jss1343:active {
+      color: #ffffff;
+      background-color: #BA1BFF;
+    }
+    
+    .jss1343:active .jss1346 {
+      color: #ffffff;
+    }
+    
+    .jss1345 {
+      position: absolute;
+      margin-right: 0!important;
+    }
+    
+    .jss1346 {
+      color: #861BE3;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1297 {
+      padding: 0;
+      overflow: visible;
+      min-width: 513px;
+      min-height: 513px;
+      border-radius: 16px;
+      background-color: #2C384A;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1297 {
+        min-width: auto;
+        min-height: auto;
+      }
+    }
+    
+    .jss1298 {
+      width: 592px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1298 {
+        width: calc(100% <br>- 80px);
+      }
+    }
+    
+    .jss1298 .jss1302 {
+      top: 16px;
+      right: 0;
+      margin-right: -56px;
+    }
+    
+    .jss1299 {
+      width: 592px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1299 {
+        width: calc(100% <br>- 80px);
+      }
+    }
+    
+    .jss1299 .jss1302 {
+      top: 16px;
+      left: 0;
+      margin-left: -56px;
+    }
+    
+    .jss1300 {
+      max-height: calc(100% <br>- 112px);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1300 {
+        max-height: calc(100% <br>- 80px);
+      }
+    }
+    
+    .jss1300 .jss1302 {
+      left: 16px;
+      bottom: 0;
+      margin-bottom: -56px;
+    }
+    
+    .jss1301 {
+      max-height: calc(100% <br>- 112px);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1301 {
+        max-height: calc(100% <br>- 80px);
+      }
+    }
+    
+    .jss1301 .jss1302 {
+      top: 0;
+      right: 16px;
+      margin-top: -56px;
+    }
+    
+    .jss1302 {
+      position: absolute;
+    }
+    
+    .jss1303 {
+      width: 100%;
+      height: 100%;
+      padding: 32px;
+      overflow: auto;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1303 {
+        padding: 24px 32px;
+      }
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1303 {
+        padding: 24px 16px;
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1881 {
+      color: #212121;
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #ffffff;
+    }
+    
+    .jss1882 {
+      color: #212121;
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #FFE9B6;
+    }
+    
+    .jss1883 {
+      color: #212121;
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #F4F4F9;
+    }
+    
+    .jss1884 {
+      color: #ffffff;
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #A24FEA;
+    }
+    
+    .jss1885 {
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #263040;
+    }
+    
+    .jss1886 {
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #2C384A;
+    }
+    
+    .jss1887 {
+      background-color: #2C384A;
+    }
+    
+    .jss1888 {
+      border-color: #FF4A50;
+      border-style: solid;
+      border-width: 1px;
+    }
+    
+    .jss1889 {
+      border-color: #FFC540;
+      border-style: solid;
+      border-width: 1px;
+    }
+    
+    .jss1890 {
+      border-width: 0;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1234 {
+      display: contents;
+    }
+    
+    .jss1234 canvas {
+      z-index: 1100;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1242 {
+      color: #8191A2;
+      user-select: none;
+    }
+    
+    .jss1243 {
+      color: #36C5F0;
+      cursor: pointer;
+      transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      text-decoration: none;
+    }
+    
+    .jss1243:hover {
+      color: #A24FEA;
+    }
+    
+    .jss1243:active {
+      color: #861BE3;
+    }
+    
+    .jss1244 {
+      display: inline-block;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1370 {
+      padding: 24px;
+      font-size: 12px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 18px;
+      border-radius: 16px;
+    }
+    
+    .jss1371:before {
+      display: none;
+    }
+    
+    .jss1372[data-popper-placement*="top"] .MuiTooltip-arrow {
+      width: 42px;
+      height: 12px;
+      transform: rotate(180deg);
+      margin-bottom: -10px;
+    }
+    
+    .jss1372[data-popper-placement*="right"] .MuiTooltip-arrow {
+      width: 12px;
+      height: 42px;
+      transform: rotate(180deg);
+      margin-left: -10px;
+    }
+    
+    .jss1372[data-popper-placement*="bottom"] .MuiTooltip-arrow {
+      width: 42px;
+      height: 12px;
+      margin-top: -10px;
+    }
+    
+    .jss1372[data-popper-placement*="left"] .MuiTooltip-arrow {
+      width: 12px;
+      height: 42px;
+      margin-right: -10px;
+    }
+    
+    .jss1373 {
+      margin-bottom: 8px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1385 {
+      opacity: 0.92!important;
+      font-size: 12px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 18px;
+      border-radius: 8px;
+    }
+    
+    .jss1386:before {
+      opacity: 0.92;
+    }
+    
+    .jss1387 {
+      margin-bottom: 8px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1368 {
+      border: 1px solid #ffffff;
+      filter: drop-shadow(0px 2px 3px rgba(81, 96, 119, 0.2));
+      box-sizing: border-box;
+    }
+    
+    .jss1368:hover {
+      border: 1px solid #008BFF;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1860 {
+      padding: 24px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      background-color: #263040;
+    }
+    
+    .jss1861 {
+      display: flex;
+    }
+    
+    .jss1862 {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+    }
+    
+    .jss1863 {
+      cursor: pointer;
+    }
+    
+    .jss1864 {
+      overflow: hidden;
+      white-space: nowrap;
+      margin-right: 32px;
+      text-overflow: ellipsis;
+    }
+    
+    .jss1865 {
+      gap: 16px;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      white-space: nowrap;
+    }
+    
+    .jss1866 svg {
+      transition: transform 300ms;
+    }
+    
+    .jss1867 svg {
+      transform: rotate(180deg);
+    }
+    
+    .jss1868 {
+      word-wrap: break-word;
+      padding-top: 16px;
+    }
+    
+    .jss1869 {
+      color: #D2D9E1;
+      cursor: default;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1895 {
+      width: 336px;
+    }
+    
+    .jss1895.MuiFormControl-fullWidth {
+      width: 100%;
+    }
+    
+    .jss1895 .MuiInputBase-root {
+      font-size: 14px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    
+    .jss1895 .MuiFilledInput-root {
+      transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 8px;
+    }
+    
+    .jss1895 .MuiFilledInput-underline:after {
+      content: initial;
+    }
+    
+    .jss1895 .MuiInputLabel-root {
+      font-size: 14px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    
+    .jss1895 .MuiFormHelperText-root.Mui-disabled .jss1898 p {
+      color: #8191A2;
+    }
+    
+    .jss1895 .MuiFilledInput-root + .MuiFormHelperText-root.MuiFormHelperText-marginDense {
+      margin-left: 0;
+    }
+    
+    .jss1895 .MuiInputBase-input {
+      height: initial;
+      padding: 0;
+    }
+    
+    .jss1895 .MuiInputLabel-outlined.MuiInputLabel-shrink {
+      transform: translate(16px, -6px) scale(0.85) !important;
+    }
+    
+    .jss1895 .MuiInputLabel-root.Mui-disabled {
+      color: #8191A2;
+    }
+    
+    .jss1895 .MuiOutlinedInput-root.Mui-disabled {
+      color: #8191A2;
+    }
+    
+    .jss1895 .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+      transition: border-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 8px;
+    }
+    
+    .jss1895 .MuiOutlinedInput-root.Mui-focused .jss1896 svg {
+      fill: #44EB99;
+    }
+    
+    .jss1895 .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline legend span {
+      color: #861BE3;
+    }
+    
+    .jss1895 .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline legend {
+      height: 14px;
+      font-size: 12px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 18px;
+    }
+    
+    .jss1895 .MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {
+      border: 1px solid #516071;
+    }
+    
+    .jss1895 .MuiOutlinedInput-root.Mui-disabled svg {
+      fill: #8191A2;
+    }
+    
+    .jss1895 .MuiFilledInput-root:before {
+      top: 0;
+      transition: border-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 8px;
+    }
+    
+    .jss1895 .MuiFilledInput-root.Mui-focused .jss1896 svg {
+      fill: #44EB99;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1895 .MuiInputBase-root {
+        font-size: 18px;
+        font-style: normal;
+        font-family: "SB Sans Text", Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+    
+    .jss1896 {
+      height: 24px;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+    
+    .jss1896 svg {
+      transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    
+    .jss1897 {
+      height: 24px;
+      flex-shrink: 0;
+      margin-left: 8px;
+    }
+    
+    .jss1897 svg {
+      transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    
+    .jss1898 {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8 {
+      padding: 40px;
+      position: relative;
+      margin-top: 60px;
+      overflow-y: visible;
+      border-radius: 16px;
+      background-color: #2C384A;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss8 {
+        width: 320px;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-right: 40px;
+      }
+    }
+    
+    .jss9 {
+      top: -56px;
+      right: 0;
+      position: absolute;
+    }
+    
+    .jss10 {
+      top: 0;
+      right: 0;
+      position: absolute;
+    }
+    
+    .jss11 {
+      width: 100%;
+    }
+    
+    .jss12 {
+      margin-bottom: 22px;
+    }
+    
+    .jss13 {
+      overflow: hidden;
+      position: relative;
+      padding-right: 20px;
+      text-overflow: ellipsis;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss13 {
+        padding-right: 40px;
+      }
+    }
+    
+    .jss14 {
+      margin-bottom: 8px;
+    }
+    
+    .jss15 {
+      position: relative;
+      word-wrap: break-word;
+    }
+    
+    .jss16 {
+      display: flex;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss16 {
+        flex-direction: column-reverse;
+      }
+    }
+    
+    .jss19 {
+      z-index: -1;
+      position: absolute;
+    }
+    
+    @media (min-width:1280px) {
+      .jss20 .MuiDialog-container {
+        background-repeat: no-repeat;
+        background-position: left bottom;
+      }
+    }
+    
+    @media (min-width:1280px) {
+      .jss21 .MuiDialog-container {
+        background-repeat: no-repeat;
+        background-position: right 24px bottom 24px;
+      }
+    }
+    
+    @media (min-width:1280px) {
+      .jss22 .MuiDialog-container {
+        background-repeat: no-repeat;
+        background-position: right 0 bottom 0;
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1323 {
+      height: 32px;
+      display: flex;
+      z-index: 1099;
+      position: relative;
+      margin-top: 4px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .jss1324 {
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 14px;
+      font-style: normal;
+      font-family: SB Sans Text;
+      font-weight: normal;
+      line-height: 20px;
+      padding-bottom: 2px;
+    }
+    
+    .jss1324:hover {
+      color: #44EB99;
+    }
+    
+    .jss1324 a {
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 14px;
+      font-style: normal;
+      font-family: SB Sans Text;
+      font-weight: normal;
+      line-height: 20px;
+      padding-bottom: 2px;
+      text-decoration: none;
+    }
+    
+    .jss1324 a:hover {
+      color: #44EB99;
+    }
+    
+    .jss1325 {
+      color: #44EB99;
+      border-bottom: 2px solid #44EB99;
+    }
+    
+    .jss1325 a {
+      color: #44EB99;
+    }
+    
+    .jss1326 {
+      color: #44EB99;
+    }
+    
+    .jss1327 {
+      left: 0;
+      right: 0;
+      height: 364px;
+      z-index: 1098;
+      position: absolute;
+      padding-top: 32px;
+      background-color: #1D2633;
+    }
+    
+    .jss1328 {
+      color: #ffffff;
+      margin: 32px auto 40px auto;
+      padding: 34px 24px 24px;
+      max-width: 640px;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss1328 {
+        gap: 10px;
+        max-width: 500px;
+      }
+    }
+    
+    .jss1329 {
+      height: 100vh;
+      opacity: 0.5;
+      z-index: 1097;
+      background: #1D2633;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1203 {
+      width: 100%;
+      flex-grow: 1;
+      max-width: 1216px;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss1203 {
+        max-width: 892px;
+      }
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1203 {
+        min-height: auto;
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1203 {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+    
+    .jss1204 {
+      color: #ffffff;
+      width: 100%;
+      flex-grow: 1;
+      margin-top: 32px;
+    }
+    
+    .jss1205 {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1286 {
+      margin-top: 8px;
+    }
+    
+    .jss1287 {
+      margin-top: 8px;
+    }
+    
+    .jss1288 {
+      color: #ffffff;
+      margin-top: 24px;
+    }
+    
+    .jss1289 {
+      margin-top: 24px;
+    }
+    
+    .jss1290 {
+      margin: 24px 0px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .jss1291 {
+      height: 80px;
+    }
+    
+    .jss1292 {
+      margin-top: 16px;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1293 {
+        height: calc(100% <br>- 80px);
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1333 {
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      height: 32px;
+      padding: 4px;
+      background: transparent;
+      transition: backgroundColor 250ms cubic-bezier(0.4, 0, 1, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 1, 1) 0ms;
+      border-radius: 8px;
+    }
+    
+    @media (hover: hover) {
+      .jss1333:hover {
+        background-color: #323842;
+      }
+    }
+    
+    .jss1333:active {
+      color: #44EB99;
+      outline: none;
+      background-color: #323842;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1320 {
+      z-index: 1096;
+      transform-origin: 0 0;
+    }
+    
+    .jss1321 {
+      cursor: default;
+      pointer-events: none;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1309 {
+      position: relative;
+    }
+    
+    .jss1310 {
+      margin-bottom: 2rem;
+    }
+    
+    .jss1311 {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1311 {
+        position: static;
+      }
+    }
+    
+    .jss1312 {
+      color: #8191A2;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .jss1313 {
+      margin: 0 0 2rem 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .jss1313:last-child {
+      margin-bottom: 0;
+    }
+    
+    .jss1314 {
+      display: flex;
+      position: relative;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1314 {
+        justify-content: start;
+      }
+    }
+    
+    .jss1315 {
+      color: #8191A2;
+      right: 0;
+      position: absolute;
+      line-height: 40px;
+    }
+    
+    .jss1316 .MuiBadge-badge {
+      cursor: default;
+      height: 26px;
+      padding: 0 8px;
+      font-size: 12px;
+      min-width: 26px;
+      text-align: center;
+      line-height: 26;
+      user-select: none;
+      border-radius: 16px;
+      pointer-events: none;
+    }
+    
+    .jss1317 {
+      list-style-type: none;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1358 {
+      color: #ffffff;
+      cursor: pointer;
+      height: 56px;
+      display: flex;
+      padding: 8px;
+      align-items: center;
+      border-radius: 16px;
+    }
+    
+    .jss1358:hover {
+      background-color: #861BE3;
+    }
+    
+    .jss1359 {
+      width: 40px;
+      border: 1px solid #ffffff;
+      height: 40px;
+    }
+    
+    .jss1360 {
+      height: 1px;
+      margin: 8px 0;
+      background-color: #C6CFDA;
+    }
+    
+    .jss1361 {
+      color: #A24FEA;
+    }
+    
+    .jss1362 {
+      padding: 16px;
+      min-width: 336px;
+      box-shadow: 0px 19px 38px rgba(29, 38, 51, 0.15), 0px 15px 12px rgba(29, 38, 51, 0.1);
+      border-radius: 8px;
+    }
+    
+    .jss1363 {
+      padding: 0;
+    }
+    
+    .jss1364 {
+      display: flex;
+      padding: 10px 12px;
+      align-items: center;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .jss1364:last-of-type {
+      margin-bottom: 0;
+    }
+    
+    .jss1364:hover {
+      color: #ffffff;
+      background: #A24FEA !important;
+    }
+    
+    .jss1364:focus {
+      background-color: transparent;
+    }
+    
+    .jss1365 {
+      display: flex;
+      padding: 8px 12px;
+      align-items: center;
+      margin-bottom: 8px;
+      justify-content: space-between;
+    }
+    
+    .jss1365:last-of-type {
+      margin-bottom: 0;
+    }
+    
+    .jss1365:hover {
+      background-color: transparent;
+    }
+    
+    .jss1365:focus {
+      background-color: transparent;
+    }
+    
+    .jss1366 {
+      display: block;
+      margin-right: 11px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1207 {
+      z-index: 2;
+      position: relative;
+    }
+    
+    .jss1207 *:before {
+      border-bottom: none !important;
+    }
+    
+    .jss1207::before {
+      border-bottom: none !important;
+    }
+    
+    .jss1208 {
+      color: #ffffff;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss1209 {
+        max-width: 100%;
+      }
+    }
+    
+    .jss1210 {
+      left: 0;
+      right: 0;
+      position: relative;
+      background-color: #1D2633;
+    }
+    
+    .jss1211 {
+      height: 84px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .jss1212 {
+      display: flex;
+      box-shadow: 0px 2px 3px rgba(81, 96, 119, 0.2);
+      margin-top: -1px;
+      min-height: 128px;
+      padding-top: 9px;
+      justify-content: space-between;
+      background-color: #1D2633;
+    }
+    
+    .jss1212:before {
+      top: -95px;
+      width: 100%;
+      height: 100px;
+      content: "";
+      position: absolute;
+      background-color: #1D2633;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1212 {
+        min-height: auto;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss1212 > .jss1216 {
+        width: 156px;
+      }
+    }
+    
+    .jss1213 {
+      min-width: 1440px;
+    }
+    
+    .jss1214 {
+      width: 634px;
+      display: flex;
+      padding: 16px 0;
+      align-items: center;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss1214 {
+        width: 465px;
+      }
+    }
+    
+    .jss1215 {
+      width: 267px;
+      position: relative;
+      flex-shrink: 0;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss1215 {
+        width: 156px;
+      }
+    }
+    
+    @media (min-width:1280px) {
+      .jss1215 {
+        padding-left: 24px;
+      }
+    }
+    
+    .jss1216 {
+      width: 260px;
+      display: flex;
+      z-index: 1100;
+      position: relative;
+      align-items: center;
+      flex-shrink: 0;
+      justify-content: flex-end;
+    }
+    
+    .jss1217 {
+      width: 260px;
+    }
+    
+    .jss1218 {
+      display: flex;
+      column-gap: 16px;
+      align-items: center;
+      padding-right: 32px;
+    }
+    
+    .jss1219 {
+      display: flex;
+      column-gap: 10px;
+    }
+    
+    .jss1220 {
+      width: 100%;
+    }
+    
+    .jss1221 {
+      display: flex;
+      z-index: 1;
+      max-width: 50%;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss1221 {
+        max-width: 100%;
+      }
+    }
+    
+    .jss1222 {
+      display: flex;
+      word-break: break-word;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1222 {
+        padding: 0 32px;
+        text-align: center;
+      }
+    }
+    
+    .jss1223 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 24px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 800;
+      line-height: 30px;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1223 {
+        font-size: 18px;
+        font-style: normal;
+        font-family: "SB Sans Display", Helvetica, sans-serif;
+        font-weight: 800;
+        line-height: 24px;
+      }
+    }
+    
+    .jss1224 {
+      color: #D2D9E1;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      margin-right: 16px;
+    }
+    
+    .jss1225 {
+      padding: 2px;
+      transform: rotate(180deg);
+    }
+    
+    .jss1226 {
+      width: 100%;
+    }
+    
+    .jss1227 {
+      width: 56px;
+      height: 56px;
+      background: #323842;
+      border-radius: 12px;
+    }
+    
+    .jss1228 {
+      background: #861BE3;
+    }
+    
+    .jss1229:hover {
+      background: none;
+    }
+    
+    .jss1230 .MuiBadge-badge {
+      color: #212121;
+      cursor: default;
+      height: 16px;
+      padding: 0 4px;
+      font-size: 12px;
+      min-width: 16px;
+      line-height: 16;
+    }
+    
+    .jss1231 {
+      display: flex;
+      min-height: 72px;
+      justify-content: space-between;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss1231 {
+        max-width: 100%;
+      }
+      .jss1231 .MuiTabs-scroller .MuiTabs-flexContainer {
+        display: block;
+      }
+      .jss1231 .MuiTabs-scroller .MuiTabs-flexContainer .MuiTab-root {
+        min-width: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1231 .MuiTabs-scroller .MuiTabs-flexContainer .MuiButtonBase-root:first-child {
+        margin-left: 16px;
+      }
+      .jss1231 .MuiTabs-scroller .MuiTabs-flexContainer .MuiButtonBase-root:nth-last-child(1) {
+        margin-right: 16px;
+      }
+    }
+    
+    .jss1232 {
+      cursor: pointer;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss29 {
+      top: 0;
+      z-index: 1101;
+      position: sticky;
+      transform: translateY(0%);
+      transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    
+    .jss30 {
+      transform: translateY(-100%);
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss6 {
+      color: #AEBBCA;
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    
+    .jss7 {
+      color: #ffffff;
+      margin-right: 36px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1945 {
+      display: flex;
+      padding: 16px;
+      position: relative;
+      align-items: center;
+      border-radius: 12px;
+      margin-bottom: 1px;
+      justify-content: space-between;
+      text-decoration: none;
+    }
+    
+    .jss1945:not(:last-child):after {
+      width: calc(100% <br>- 32px);
+      bottom: -1px;
+      height: 1px;
+      content: " ";
+      position: absolute;
+      background: #516071;
+    }
+    
+    .jss1946 {
+      cursor: pointer;
+      transition: background 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    
+    .jss1946:hover {
+      color: #212121;
+      background: #A24FEA;
+    }
+    
+    .jss1946:hover .jss1951,
+    .jss1946:hover .jss1954,
+    .jss1946:hover .jss1953 {
+      color: #212121;
+    }
+    
+    .jss1947 {
+      flex: 1;
+      display: flex;
+      min-width: 0;
+      align-items: center;
+    }
+    
+    .jss1948 {
+      display: flex;
+      align-items: center;
+    }
+    
+    .jss1949 {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-left: 12px;
+      margin-right: 24px;
+    }
+    
+    .jss1950 {
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 0;
+      align-items: baseline;
+      margin-right: auto;
+    }
+    
+    .jss1951 {
+      color: #ffffff;
+      overflow: hidden;
+      white-space: normal;
+      margin-right: 12px;
+      text-overflow: ellipsis;
+    }
+    
+    .jss1952 {
+      color: #D2D9E1;
+    }
+    
+    .jss1953 {
+      color: #AEBBCA;
+      margin-right: 12px;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1953 {
+        font-size: 14px;
+        font-style: normal;
+        font-family: "SB Sans Text", Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+    
+    .jss1954 {
+      flex: 0;
+      color: #AEBBCA;
+      white-space: nowrap;
+    }
+    
+    .jss1954:not(:last-child) {
+      margin-right: 24px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1891 {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1891 {
+        align-items: flex-end;
+        flex-direction: column;
+      }
+      .jss1891 .MuiInputBase-root {
+        font-size: 14px;
+        font-style: normal;
+        font-family: "SB Sans Text", Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+    
+    .jss1891 .MuiTextField-root {
+      margin: 0;
+    }
+    
+    .jss1891 .MuiTextField-root .MuiFilledInput-root::before {
+      border: none;
+    }
+    
+    .jss1891 .MuiTextField-root .MuiFilledInput-root .MuiInputBase-input {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    
+    .jss1892 {
+      display: flex;
+      flex-shrink: 0;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1892 {
+        margin-top: 24px;
+      }
+    }
+    
+    .jss1893 {
+      margin-left: 24px;
+    }
+    
+    .jss1894 {
+      margin-left: 8px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1404 {
+      top: 128px;
+      width: 100%;
+      padding: 24px;
+      position: sticky;
+      max-width: 380px;
+      border-radius: 16px;
+      background-color: #263040;
+    }
+    
+    .jss1405 {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .jss1405 li:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    
+    .jss1406 {
+      color: #ffffff;
+      cursor: pointer;
+      height: 40px;
+      display: -webkit-box;
+      overflow: hidden;
+      font-size: 14px;
+      min-width: 0;
+      font-style: normal;
+      transition: background 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      word-break: break-all;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+      padding-left: 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      -webkit-box-align: center;
+    }
+    
+    .jss1406 > span {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    
+    .jss1406:hover {
+      color: #212121;
+      background: #A24FEA;
+    }
+    
+    .jss1407 {
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    
+    .jss1408 {
+      font-size: 16px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 20px;
+      pointer-events: none;
+    }
+    
+    .jss1409 {
+      top: 24px;
+      left: 24px;
+      width: 4px;
+      height: 40px;
+      z-index: 2;
+      position: absolute;
+      transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 4px;
+      background-color: #A24FEA;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1925 {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+    
+    .jss1926 {
+      margin-right: 12px;
+    }
+    
+    .jss1927 {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+    
+    .jss1928 {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .jss1929 {
+      padding: 24px;
+      box-shadow: 0px 2px 3px rgba(81, 96, 119, 0.2);
+      border-radius: 12px;
+      background-color: #2C384A;
+    }
+    
+    .jss1930 {
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+    
+    .jss1931 {
+      display: inline;
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+    
+    .jss1932 {
+      width: 100%;
+    }
+    
+    .jss1933 {
+      display: inline;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss2045 {
+      margin-bottom: 48px;
+    }
+    
+    .jss2045 .MuiButton-startIcon {
+      margin: 0;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1856 {
+      display: flex;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1856 {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    
+    .jss1857 {
+      box-shadow: none;
+      margin-right: 16px;
+      background-color: #44EB99;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1857 {
+        margin-right: 0;
+      }
+    }
+    
+    .jss1858 {
+      box-shadow: 0 0 0 1px #D2D9E1 inset;
+      margin-right: 0;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1973 {
+      margin-bottom: 12px;
+    }
+    
+    .jss1974 {
+      white-space: pre-wrap;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1960 {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+    
+    .jss1961 {
+      word-break: break-all;
+      margin-bottom: 16px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss2011 {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+    
+    .jss2012 {
+      display: flex;
+      margin-bottom: 12px;
+    }
+    
+    .jss2013 {
+      color: #008BFF;
+      margin-left: 12px;
+    }
+    
+    .jss2014 {
+      margin-top: 0;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss2015 {
+      max-width: 444px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1992 {
+      display: inline-flex;
+      position: relative;
+    }
+    
+    .jss1993 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      opacity: 0;
+      padding: 0;
+      z-index: 1;
+      position: absolute;
+      -webkit-appearance: none;
+    }
+    
+    .jss1994 {
+      margin: 0;
+      display: flex;
+      z-index: 2;
+      position: relative;
+      font-size: 14px;
+      min-width: 32px;
+      font-style: normal;
+      transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      align-items: center;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+      border-radius: 8px;
+    }
+    
+    .jss1994 svg {
+      display: block;
+    }
+    
+    .jss1995 .jss1994 {
+      color: #212121;
+      cursor: pointer;
+      box-shadow: 0 0 0 1px #D2D9E1 inset;
+      background-color: #ffffff;
+    }
+    
+    .jss1995 svg {
+      fill: #212121;
+    }
+    
+    .jss1995 .jss1993:checked ~ .jss1994 {
+      color: #ffffff;
+      box-shadow: none;
+      background-color: #861BE3;
+    }
+    
+    .jss1995 .jss1993:disabled ~ .jss1994 {
+      color: #D2D9E1;
+      box-shadow: 0 0 0 1px #D2D9E1 inset;
+      pointer-events: none;
+    }
+    
+    .jss1995 .jss1993[disabled]:checked ~ .jss1994 {
+      background-color: #D2D9E1;
+    }
+    
+    .jss1995 .jss1993[disabled]:checked ~ .jss1994 > svg {
+      fill: #D2D9E1;
+    }
+    
+    .jss1995 .jss1993:disabled ~ .jss1994 > svg {
+      fill: #D2D9E1;
+    }
+    
+    .jss1995 .jss1993:checked ~ .jss1994 > svg {
+      fill: #ffffff;
+    }
+    
+    .jss1995 .jss1994:hover {
+      color: #ffffff;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss1995 .jss1994:hover > svg {
+      fill: #ffffff;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss2032 {
+      margin-right: 12px;
+      margin-bottom: 8px;
+    }
+    
+    .jss2033 svg {
+      fill: #FF4A50;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss2031 {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      justify-content: center;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1859 {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1975 {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+    
+    .jss1976 {
+      word-break: break-all;
+      margin-bottom: 16px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1988 {
+      word-break: break-all;
+      margin-bottom: 16px;
+    }
+    
+    .jss1988:last-child {
+      margin-bottom: 0;
+    }
+    
+    .jss1989 {
+      margin-right: 12px;
+    }
+    
+    .jss1989:last-child {
+      margin-right: 0;
+    }
+    
+    .jss1990 {
+      display: flex;
+      margin-top: 24px;
+    }
+    
+    .jss1991 {
+      width: 60%;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1991 {
+        width: 100%;
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1402 {
+      gap: 20px 8px;
+      color: #516071;
+      display: grid;
+      padding: 24px;
+      align-items: center;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      background-color: #263040;
+      grid-template-columns: 24px 1fr 120px;
+    }
+    
+    .jss1403 {
+      text-align: right;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss1200 {
+      display: grid;
+      grid-column-gap: 32px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    
+    @media (max-width:599.95px) {
+      .jss1200 {
+        grid-column-gap: 24px;
+      }
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1200 {
+        align-content: start;
+      }
+    }
+    
+    .jss1201 {
+      grid-column: span 8;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1201 {
+        grid-column: span 12;
+      }
+    }
+    
+    .jss1202 {
+      grid-column: span 4;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss1202 {
+        order: -1;
+        grid-column: span 12;
+      }
+    }
+  </style>
+</head>
+
+<body style="">
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ8HBZ2&gtm_auth=&gtm_preview=&gtm_cookies_win=x" height="0" width="0" style="display:none;visibility:hidden" id="tag-manager"></iframe>
+  </noscript>
+  <div id="root">
+    <div class="jss1205 jss1206">
+      <nav>
+        <div class="jss1207">
+          <div class="jss1212">
+            <section class="jss1215"></section>
+            <section class="jss1221">
+              <div class="jss1222">
+                <h2 class="jss1223">Checklist Day02</h2></div>
+              <div class="jss1231">
+                <div class="jss1209"></div>
+              </div>
+            </section>
+            <section class="jss1217"></section>
+          </div>
+        </div>
+      </nav>
+      <div class="jss1203 jss1200">
+        <main class="jss1201">
+          <div id="exercise-00-how-much-money-does-money-cost4441" class="jss1975">
+            <div class="jss1860" data-testid="checklistForm.section">
+              <div class="jss1861" data-testid="checklistForm.section.header">
+                <div class="jss1862 jss1863">
+                  <h5 class="jss1245 jss1250 jss1864"><div>Exercise 00</div></h5></div>
+                <div class="jss1865" data-testid="checklistForm.section.buttons">
+                  <button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root jss1335 jss1977 jss1342 jss1984 jss1866 jss1867 css-5hq126" tabindex="0" type="button" data-testid="checklistForm.section.button.expanded"><span class="MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="jss1285" width="24" height="24"><path d="M15.88 9.29L12 13.17L8.12 9.29C7.73 8.9 7.1 8.9 6.71 9.29C6.32 9.68 6.32 10.31 6.71 10.7L11.3 15.29C11.69 15.68 12.32 15.68 12.71 15.29L17.3 10.7C17.69 10.31 17.69 9.68 17.3 9.29C16.91 8.91 16.27 8.9 15.88 9.29Z"></path></svg></span></button>
+                </div>
+              </div>
+              <div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-c4sutr" data-testid="checklistForm.section.collapse" style="min-height: 0px;">
+                <div class="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
+                  <div class="jss1868 MuiCollapse-wrapperInner MuiCollapse-vertical css-8atqhb">
+                    <div>
+                      <div class="jss1886 jss1890 MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 jss1988 css-dar48a" type="default">
+                        <h5 class="jss1245 jss1250 jss1973">Exercise 00 - How much money does money cost?</h5>
+                        <p class="jss1245 jss1253 jss1974"><br>- The program should read the exchange rates from files at the specified path, they should not be copied directly into the code. Is it so? <br>- The application should read data from files. The path to the folder with these files should be an input argument. Is it so? <br>- Is information about the currency stored in the struct? <br>- Does the program issue a validation error in case of insufficient or incorrect input parameters? <br>- Does the program give the correct answer for the following input data? $ dotnet run “100 RUB” “path/to/file” Amount in the original currency: 100.00 RUB Amount in USD: 1.36 USD Amount in EUR: 1.11 EUR <br>- Does the program give the correct answer for the following input data? $ dotnet run “100 EUR” “path/to/file” Amount in the original currency: 100.00 EUR Amount in USD: 81.97 USD Amount in EUR: 8,990.38 RUB <br>- Does the program give the correct answer for the following input data? $ dotnet run “100 USD” “path/to/file” Amount in the original currency: 100.00 USD Amount in USD: 7,369.74 RUB Amount in EUR: 121.99 EUR
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="exercise-01-worklife-balance4442" class="jss1975">
+            <div class="jss1860" data-testid="checklistForm.section">
+              <div class="jss1861" data-testid="checklistForm.section.header">
+                <div class="jss1862 jss1863">
+                  <h5 class="jss1245 jss1250 jss1864"><div>Exercise 01</div></h5></div>
+                <div class="jss1865" data-testid="checklistForm.section.buttons">
+                  <button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root jss1335 jss1998 jss1342 jss2005 jss1866 jss1867 css-5hq126" tabindex="0" type="button" data-testid="checklistForm.section.button.expanded"><span class="MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="jss1285" width="24" height="24"><path d="M15.88 9.29L12 13.17L8.12 9.29C7.73 8.9 7.1 8.9 6.71 9.29C6.32 9.68 6.32 10.31 6.71 10.7L11.3 15.29C11.69 15.68 12.32 15.68 12.71 15.29L17.3 10.7C17.69 10.31 17.69 9.68 17.3 9.29C16.91 8.91 16.27 8.9 15.88 9.29Z"></path></svg></span></button>
+                </div>
+              </div>
+              <div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-c4sutr" data-testid="checklistForm.section.collapse" style="min-height: 0px;">
+                <div class="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
+                  <div class="jss1868 MuiCollapse-wrapperInner MuiCollapse-vertical css-8atqhb">
+                    <div>
+                      <div class="jss1886 jss1890 MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 jss1988 css-dar48a" type="default">
+                        <h5 class="jss1245 jss1250 jss1973">Exercise 01 - Work-life balance.</h5>
+                        <p class="jss1245 jss1253 jss1974"><br>- Is Task a class and does it have Title [string] properties, Summary [string], Type [enum], Priority [enum], DueDate [DateTime?]? <br>- Is the TaskType field an enumerated type with Work, Study, Personal values? <br>- Is the Priority field an enumerated type with Low, Normal, High values? <br>- Are Title and Type required fields, Summary and DueDate optional fields, Priority <br>- optional field with a default value? <br>- Is the created task automatically set to the New status? <br>- If you request a task list without adding a single one, does the application work without exceptions? <br>- Does the program give the correct response without input data? <br>- Does the program give the correct response for the following input data? $ add Water the flowers Water the flowers in the kitchen and living room. Do not forget about your favorite succulent! 11/2/2021 Personal Output: <br>- Water the flowers [Personal] [New] Priority: Normal, Due till 11/2/2021 Water the flowers in the kitchen and living room. Do not forget about your favorite succulent! <br>- Does the program give the correct response for the following input data? $ add Complete day 02 Complete day 02 of the .NET course. Upload the code to the repository. Study Output: <br>- Complete day 02 [Study] [New] Priority: Normal Complete day 02 of the .NET course. Upload the code to the repository. <br>- Does the program give the correct response for the following input data? $ add Prepare for the meeting Upgrade discussion coming soon! You need to study everything to prepare. 11/21/2021 Work High Output: <br>- Prepare for the meeting [Work] [New] Priority: High, Due till 11/21/2021 Upgrade discussion coming soon! You need to study everything to prepare. <br>- Does the program give the correct response for the following input data? $ list <br>- Water the flowers [Personal] [New] Priority: Normal, Due till 11/2/2021 Water the flowers in the kitchen and living room. Do not forget about your favorite succulent! <br>- Complete day 02 [Study] [New] Priority: Normal Complete day 02 of the .NET course. Upload the code to the repository. <br>- Prepare for the meeting [Work] [New] Priority: High, Due till 11/21/2021 Upgrade discussion coming soon! You need to study everything to prepare. <br>- Does the program give the correct response for the following input data? $ done Input error. Check the input data and repeat the request. <br>- Does the program give the correct response for the following input data? $ done Test Input error. Check the input data and repeat the request. <br>- Does the program give the correct response for the following input data? $ done Water the flowers The task [Water the flowers] is completed! <br>- Does the program give the correct response for the following input data? $ wontdo Input error. Check the input data and repeat the request. <br>- Does the program give the correct response for the following input data? $ wontdo Test Input error. Check the input data and repeat the request. <br>- Does the program give the correct response for the following input data? $ wontdo Prepare for the meeting The task [Prepare for the meeting] is no longer relevant! <br>- Is it possible to terminate the application by entering: q or quit?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <aside class="jss1202">
+          <div class="jss1402">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="jss1285" width="24" height="24">
+              <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM13 17H8C7.45 17 7 16.55 7 16C7 15.45 7.45 15 8 15H13C13.55 15 14 15.45 14 16C14 16.55 13.55 17 13 17ZM16 13H8C7.45 13 7 12.55 7 12C7 11.45 7.45 11 8 11H16C16.55 11 17 11.45 17 12C17 12.55 16.55 13 16 13ZM16 9H8C7.45 9 7 8.55 7 8C7 7.45 7.45 7 8 7H16C16.55 7 17 7.45 17 8C17 8.55 16.55 9 16 9Z"></path>
+            </svg>
+            <p class="jss1245 jss1253 jss1276">Type of project</p>
+            <p class="jss1245 jss1253 jss1277 jss1403">Individual</p>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="jss1285" width="24" height="24">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM11.78 7H11.72C11.32 7 11 7.32 11 7.72V12.44C11 12.79 11.18 13.12 11.49 13.3L15.64 15.79C15.98 15.99 16.42 15.89 16.62 15.55C16.83 15.21 16.72 14.76 16.37 14.56L12.5 12.26V7.72C12.5 7.32 12.18 7 11.78 7Z"></path>
+            </svg>
+            <p class="jss1245 jss1253 jss1276">Duration</p>
+            <p class="jss1245 jss1253 jss1277 jss1403">15 min</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script nomodule="">
+    ! function() {
+      var e = document,
+        t = e.createElement("script");
+      if (!("noModule" in t) && "onbeforeload" in t) {
+        var n = !1;
+        e.addEventListener("beforeload", (function(e) {
+          if (e.target === t) n = !0;
+          else if (!e.target.hasAttribute("nomodule") || !n) return;
+          e.preventDefault()
+        }), !0), t.type = "module", t.src = ".", e.head.appendChild(t), t.remove()
+      }
+    }();
+  </script>
+  <script nomodule="" id="vite-legacy-polyfill" src="./d02_files/polyfills-legacy.a83a1fdc.js.Без названия"></script>
+  <script nomodule="" id="vite-legacy-entry" data-src="/index-legacy.aae9c9aa.js">
+    System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))
+  </script>
+</body>
+
+</html>
