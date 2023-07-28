@@ -1,0 +1,2690 @@
+<!DOCTYPE html>
+<html lang="en" data-arp-injected="true">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style data-emotion="css-global" data-s=""></style>
+  <style data-emotion="css-global" data-s=""></style>
+  <style data-emotion="css-global" data-s=""></style>
+  <style data-emotion="css" data-s=""></style>
+  <script type="text/javascript" async="" src="./d07_files/js"></script>
+  <script async="" src="./d07_files/gtm.js"></script>
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js',
+        "clickNotifications": "click_notifications"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=&gtm_preview=&gtm_cookies_win=x';
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KQ8HBZ2');
+  </script>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="https://edu.21-school.ru/favicon.26dcd8a7.png">
+  <title>Школа 21</title>
+  <style>
+    .spinner {
+      animation: rotate 2s linear infinite;
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -25px 0 0 -25px;
+      width: 50px;
+      height: 50px;
+    }
+    
+    .spinner .path {
+      stroke: #861be3;
+      stroke-linecap: round;
+      animation: dash 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes dash {
+      0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+      }
+      100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+      }
+    }
+  </style>
+  <script type="module" crossorigin="" src="./d07_files/index.adb8b2f2.js"></script>
+  <script type="module">try{import("_").catch(()=>1);}catch(e){}window.__vite_is_dynamic_import_support=true;</script>
+  <script type="module">!function(){if(window.__vite_is_dynamic_import_support)return;console.warn("vite: loading legacy build because dynamic import is unsupported, syntax error above should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7820 .MuiBadge-dot {
+      height: 6px;
+      min-width: 6px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7731 {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .jss7732 {
+      font-size: 36px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 42px;
+    }
+    
+    .jss7733 {
+      font-size: 24px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 800;
+      line-height: 30px;
+    }
+    
+    .jss7734 {
+      font-size: 22px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 30px;
+    }
+    
+    .jss7735 {
+      font-size: 18px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 800;
+      line-height: 24px;
+    }
+    
+    .jss7736 {
+      font-size: 16px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 24px;
+    }
+    
+    .jss7737 {
+      font-size: 36px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 42px;
+    }
+    
+    .jss7738 {
+      font-size: 18px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    
+    .jss7739 {
+      font-size: 14px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    
+    .jss7740 {
+      font-size: 12px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 18px;
+    }
+    
+    .jss7741 {
+      font-size: 10px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 14px;
+    }
+    
+    .jss7742 {
+      font-size: 20px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 22px;
+    }
+    
+    .jss7743 {
+      font-size: 18px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 22px;
+    }
+    
+    .jss7744 {
+      font-size: 14px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 20px;
+    }
+    
+    .jss7745 {
+      font-size: 12px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 18px;
+    }
+    
+    .jss7746 {
+      font-size: 24px;
+      font-style: normal;
+      font-family: "Press Start 2P";
+      font-weight: 400;
+      line-height: 24px;
+    }
+    
+    .jss7747 {
+      font-size: 11px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+    
+    .jss7748 {
+      font-size: 14px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    
+    .jss7749 {
+      color: inherit;
+    }
+    
+    .jss7750 {
+      color: initial;
+    }
+    
+    .jss7751 {
+      color: #44EB99;
+    }
+    
+    .jss7752 {
+      color: #44B496;
+    }
+    
+    .jss7753 {
+      color: #861BE3;
+    }
+    
+    .jss7754 {
+      color: #BA1BFF;
+    }
+    
+    .jss7755 {
+      color: #36C5F0;
+    }
+    
+    .jss7756 {
+      color: #008BFF;
+    }
+    
+    .jss7757 {
+      color: #1A53BC;
+    }
+    
+    .jss7758 {
+      color: #FF4A50;
+    }
+    
+    .jss7759 {
+      color: #FFC540;
+    }
+    
+    .jss7760 {
+      color: #2FE4D3;
+    }
+    
+    .jss7761 {
+      color: #212121;
+    }
+    
+    .jss7762 {
+      color: #ffffff;
+    }
+    
+    .jss7763 {
+      color: #AEBBCA;
+    }
+    
+    .jss7764 {
+      color: #D2D9E1;
+    }
+    
+    .jss7765 {
+      color: #ffffff;
+    }
+    
+    .jss7766 {
+      color: #DDE3E9;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7771 {
+      fill: currentColor;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7821 {
+      cursor: pointer;
+      margin: 0;
+      display: inline-flex;
+      position: relative;
+      min-width: 24px;
+      min-height: 24px;
+      transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      align-items: center;
+      border-radius: 8px;
+      text-transform: none;
+    }
+    
+    .jss7821.Mui-disabled {
+      color: #AEBBCA;
+    }
+    
+    .jss7821 > svg {
+      fill: #ffffff;
+    }
+    
+    .jss7821 >:not(:last-child),
+    .jss7821 .MuiButton-startIcon:not(:last-child) {
+      margin-right: 8px;
+    }
+    
+    .jss7821 .MuiButton-startIcon,
+    .jss7821 .MuiButton-endIcon {
+      margin: 0;
+    }
+    
+    .jss7821.Mui-disabled .jss7832 {
+      color: #AEBBCA;
+    }
+    
+    .jss7822:hover {
+      color: #ffffff;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss7822:active {
+      color: #ffffff;
+      background-color: #BA1BFF;
+    }
+    
+    .jss7822.Mui-disabled {
+      color: #C6CFDA;
+      background-color: #516071;
+    }
+    
+    .jss7822.Mui-disabled .jss7832 {
+      color: #C6CFDA;
+    }
+    
+    .jss7822:active .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7822:hover .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7823:hover {
+      color: #ffffff;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss7823:active {
+      color: #ffffff;
+      background-color: #BA1BFF;
+    }
+    
+    .jss7823.Mui-disabled {
+      color: #C6CFDA;
+      background-color: #516071;
+    }
+    
+    .jss7823.Mui-disabled .jss7832 {
+      color: #C6CFDA;
+    }
+    
+    .jss7823:active .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7823:hover .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7824 {
+      color: #212121;
+    }
+    
+    .jss7824:hover {
+      color: #ffffff;
+      border: 1px solid #A24FEA;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss7824:active {
+      color: #ffffff;
+      border: 1px solid #861BE3;
+      background-color: #BA1BFF;
+    }
+    
+    .jss7824.Mui-disabled {
+      color: #AEBBCA;
+      border: 1px solid #8191A2;
+    }
+    
+    .jss7824.Mui-disabled .jss7832 {
+      color: #AEBBCA;
+    }
+    
+    .jss7824:active .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7824:hover .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7825:hover {
+      color: #ffffff;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss7825:active {
+      color: #ffffff;
+      background-color: #BA1BFF;
+    }
+    
+    .jss7825:active .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7825:hover .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7826:hover {
+      color: #ffffff;
+      border: 1px solid #A24FEA;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss7826:active {
+      color: #ffffff;
+      border: 1px solid #861BE3;
+      background-color: #BA1BFF;
+    }
+    
+    .jss7826.Mui-disabled {
+      color: #AEBBCA;
+      border: 1px solid #8191A2;
+    }
+    
+    .jss7826.Mui-disabled .jss7832 {
+      color: #AEBBCA;
+    }
+    
+    .jss7826:active .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7826:hover .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7821.jss7827 {
+      padding: 0;
+    }
+    
+    .jss7827:hover {
+      color: #A24FEA;
+      background: none;
+    }
+    
+    .jss7827:active {
+      color: #BA1BFF;
+      background: none;
+    }
+    
+    .jss7828:hover {
+      color: #ffffff;
+      background-color: #8191A2;
+    }
+    
+    .jss7828:active {
+      color: #ffffff;
+      background-color: #BA1BFF;
+    }
+    
+    .jss7828:active .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7829 {
+      height: 24px;
+    }
+    
+    .jss7829:hover {
+      color: #ffffff;
+      background-color: #8191A2;
+    }
+    
+    .jss7829:active {
+      color: #ffffff;
+      background-color: #BA1BFF;
+    }
+    
+    .jss7829:active .jss7832 {
+      color: #ffffff;
+    }
+    
+    .jss7831 {
+      position: absolute;
+      margin-right: 0!important;
+    }
+    
+    .jss7832 {
+      color: #861BE3;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7783 {
+      padding: 0;
+      overflow: visible;
+      min-width: 513px;
+      min-height: 513px;
+      border-radius: 16px;
+      background-color: #2C384A;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7783 {
+        min-width: auto;
+        min-height: auto;
+      }
+    }
+    
+    .jss7784 {
+      width: 592px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7784 {
+        width: calc(100% <br></br>- 80px);
+      }
+    }
+    
+    .jss7784 .jss7788 {
+      top: 16px;
+      right: 0;
+      margin-right: -56px;
+    }
+    
+    .jss7785 {
+      width: 592px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7785 {
+        width: calc(100% <br></br>- 80px);
+      }
+    }
+    
+    .jss7785 .jss7788 {
+      top: 16px;
+      left: 0;
+      margin-left: -56px;
+    }
+    
+    .jss7786 {
+      max-height: calc(100% <br></br>- 112px);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7786 {
+        max-height: calc(100% <br></br>- 80px);
+      }
+    }
+    
+    .jss7786 .jss7788 {
+      left: 16px;
+      bottom: 0;
+      margin-bottom: -56px;
+    }
+    
+    .jss7787 {
+      max-height: calc(100% <br></br>- 112px);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7787 {
+        max-height: calc(100% <br></br>- 80px);
+      }
+    }
+    
+    .jss7787 .jss7788 {
+      top: 0;
+      right: 16px;
+      margin-top: -56px;
+    }
+    
+    .jss7788 {
+      position: absolute;
+    }
+    
+    .jss7789 {
+      width: 100%;
+      height: 100%;
+      padding: 32px;
+      overflow: auto;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7789 {
+        padding: 24px 32px;
+      }
+    }
+    
+    @media (max-width:599.95px) {
+      .jss7789 {
+        padding: 24px 16px;
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8367 {
+      color: #212121;
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #ffffff;
+    }
+    
+    .jss8368 {
+      color: #212121;
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #FFE9B6;
+    }
+    
+    .jss8369 {
+      color: #212121;
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #F4F4F9;
+    }
+    
+    .jss8370 {
+      color: #ffffff;
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #A24FEA;
+    }
+    
+    .jss8371 {
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #263040;
+    }
+    
+    .jss8372 {
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #2C384A;
+    }
+    
+    .jss8373 {
+      background-color: #2C384A;
+    }
+    
+    .jss8374 {
+      border-color: #FF4A50;
+      border-style: solid;
+      border-width: 1px;
+    }
+    
+    .jss8375 {
+      border-color: #FFC540;
+      border-style: solid;
+      border-width: 1px;
+    }
+    
+    .jss8376 {
+      border-width: 0;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7720 {
+      display: contents;
+    }
+    
+    .jss7720 canvas {
+      z-index: 1100;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7728 {
+      color: #8191A2;
+      user-select: none;
+    }
+    
+    .jss7729 {
+      color: #36C5F0;
+      cursor: pointer;
+      transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      text-decoration: none;
+    }
+    
+    .jss7729:hover {
+      color: #A24FEA;
+    }
+    
+    .jss7729:active {
+      color: #861BE3;
+    }
+    
+    .jss7730 {
+      display: inline-block;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7856 {
+      padding: 24px;
+      font-size: 12px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 18px;
+      border-radius: 16px;
+    }
+    
+    .jss7857:before {
+      display: none;
+    }
+    
+    .jss7858[data-popper-placement*="top"] .MuiTooltip-arrow {
+      width: 42px;
+      height: 12px;
+      transform: rotate(180deg);
+      margin-bottom: -10px;
+    }
+    
+    .jss7858[data-popper-placement*="right"] .MuiTooltip-arrow {
+      width: 12px;
+      height: 42px;
+      transform: rotate(180deg);
+      margin-left: -10px;
+    }
+    
+    .jss7858[data-popper-placement*="bottom"] .MuiTooltip-arrow {
+      width: 42px;
+      height: 12px;
+      margin-top: -10px;
+    }
+    
+    .jss7858[data-popper-placement*="left"] .MuiTooltip-arrow {
+      width: 12px;
+      height: 42px;
+      margin-right: -10px;
+    }
+    
+    .jss7859 {
+      margin-bottom: 8px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7871 {
+      opacity: 0.92!important;
+      font-size: 12px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 18px;
+      border-radius: 8px;
+    }
+    
+    .jss7872:before {
+      opacity: 0.92;
+    }
+    
+    .jss7873 {
+      margin-bottom: 8px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7854 {
+      border: 1px solid #ffffff;
+      filter: drop-shadow(0px 2px 3px rgba(81, 96, 119, 0.2));
+      box-sizing: border-box;
+    }
+    
+    .jss7854:hover {
+      border: 1px solid #008BFF;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8346 {
+      padding: 24px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      background-color: #263040;
+    }
+    
+    .jss8347 {
+      display: flex;
+    }
+    
+    .jss8348 {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+    }
+    
+    .jss8349 {
+      cursor: pointer;
+    }
+    
+    .jss8350 {
+      overflow: hidden;
+      white-space: nowrap;
+      margin-right: 32px;
+      text-overflow: ellipsis;
+    }
+    
+    .jss8351 {
+      gap: 16px;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      white-space: nowrap;
+    }
+    
+    .jss8352 svg {
+      transition: transform 300ms;
+    }
+    
+    .jss8353 svg {
+      transform: rotate(180deg);
+    }
+    
+    .jss8354 {
+      word-wrap: break-word;
+      padding-top: 16px;
+    }
+    
+    .jss8355 {
+      color: #D2D9E1;
+      cursor: default;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8381 {
+      width: 336px;
+    }
+    
+    .jss8381.MuiFormControl-fullWidth {
+      width: 100%;
+    }
+    
+    .jss8381 .MuiInputBase-root {
+      font-size: 14px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    
+    .jss8381 .MuiFilledInput-root {
+      transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 8px;
+    }
+    
+    .jss8381 .MuiFilledInput-underline:after {
+      content: initial;
+    }
+    
+    .jss8381 .MuiInputLabel-root {
+      font-size: 14px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    
+    .jss8381 .MuiFormHelperText-root.Mui-disabled .jss8384 p {
+      color: #8191A2;
+    }
+    
+    .jss8381 .MuiFilledInput-root + .MuiFormHelperText-root.MuiFormHelperText-marginDense {
+      margin-left: 0;
+    }
+    
+    .jss8381 .MuiInputBase-input {
+      height: initial;
+      padding: 0;
+    }
+    
+    .jss8381 .MuiInputLabel-outlined.MuiInputLabel-shrink {
+      transform: translate(16px, -6px) scale(0.85) !important;
+    }
+    
+    .jss8381 .MuiInputLabel-root.Mui-disabled {
+      color: #8191A2;
+    }
+    
+    .jss8381 .MuiOutlinedInput-root.Mui-disabled {
+      color: #8191A2;
+    }
+    
+    .jss8381 .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+      transition: border-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 8px;
+    }
+    
+    .jss8381 .MuiOutlinedInput-root.Mui-focused .jss8382 svg {
+      fill: #44EB99;
+    }
+    
+    .jss8381 .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline legend span {
+      color: #861BE3;
+    }
+    
+    .jss8381 .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline legend {
+      height: 14px;
+      font-size: 12px;
+      font-style: normal;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 18px;
+    }
+    
+    .jss8381 .MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {
+      border: 1px solid #516071;
+    }
+    
+    .jss8381 .MuiOutlinedInput-root.Mui-disabled svg {
+      fill: #8191A2;
+    }
+    
+    .jss8381 .MuiFilledInput-root:before {
+      top: 0;
+      transition: border-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 8px;
+    }
+    
+    .jss8381 .MuiFilledInput-root.Mui-focused .jss8382 svg {
+      fill: #44EB99;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss8381 .MuiInputBase-root {
+        font-size: 18px;
+        font-style: normal;
+        font-family: "SB Sans Text", Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+    
+    .jss8382 {
+      height: 24px;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+    
+    .jss8382 svg {
+      transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    
+    .jss8383 {
+      height: 24px;
+      flex-shrink: 0;
+      margin-left: 8px;
+    }
+    
+    .jss8383 svg {
+      transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    
+    .jss8384 {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8 {
+      padding: 40px;
+      position: relative;
+      margin-top: 60px;
+      overflow-y: visible;
+      border-radius: 16px;
+      background-color: #2C384A;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss8 {
+        width: 320px;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-right: 40px;
+      }
+    }
+    
+    .jss9 {
+      top: -56px;
+      right: 0;
+      position: absolute;
+    }
+    
+    .jss10 {
+      top: 0;
+      right: 0;
+      position: absolute;
+    }
+    
+    .jss11 {
+      width: 100%;
+    }
+    
+    .jss12 {
+      margin-bottom: 22px;
+    }
+    
+    .jss13 {
+      overflow: hidden;
+      position: relative;
+      padding-right: 20px;
+      text-overflow: ellipsis;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss13 {
+        padding-right: 40px;
+      }
+    }
+    
+    .jss14 {
+      margin-bottom: 8px;
+    }
+    
+    .jss15 {
+      position: relative;
+      word-wrap: break-word;
+    }
+    
+    .jss16 {
+      display: flex;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss16 {
+        flex-direction: column-reverse;
+      }
+    }
+    
+    .jss19 {
+      z-index: -1;
+      position: absolute;
+    }
+    
+    @media (min-width:1280px) {
+      .jss20 .MuiDialog-container {
+        background-repeat: no-repeat;
+        background-position: left bottom;
+      }
+    }
+    
+    @media (min-width:1280px) {
+      .jss21 .MuiDialog-container {
+        background-repeat: no-repeat;
+        background-position: right 24px bottom 24px;
+      }
+    }
+    
+    @media (min-width:1280px) {
+      .jss22 .MuiDialog-container {
+        background-repeat: no-repeat;
+        background-position: right 0 bottom 0;
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7809 {
+      height: 32px;
+      display: flex;
+      z-index: 1099;
+      position: relative;
+      margin-top: 4px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .jss7810 {
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 14px;
+      font-style: normal;
+      font-family: SB Sans Text;
+      font-weight: normal;
+      line-height: 20px;
+      padding-bottom: 2px;
+    }
+    
+    .jss7810:hover {
+      color: #44EB99;
+    }
+    
+    .jss7810 a {
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 14px;
+      font-style: normal;
+      font-family: SB Sans Text;
+      font-weight: normal;
+      line-height: 20px;
+      padding-bottom: 2px;
+      text-decoration: none;
+    }
+    
+    .jss7810 a:hover {
+      color: #44EB99;
+    }
+    
+    .jss7811 {
+      color: #44EB99;
+      border-bottom: 2px solid #44EB99;
+    }
+    
+    .jss7811 a {
+      color: #44EB99;
+    }
+    
+    .jss7812 {
+      color: #44EB99;
+    }
+    
+    .jss7813 {
+      left: 0;
+      right: 0;
+      height: 364px;
+      z-index: 1098;
+      position: absolute;
+      padding-top: 32px;
+      background-color: #1D2633;
+    }
+    
+    .jss7814 {
+      color: #ffffff;
+      margin: 32px auto 40px auto;
+      padding: 34px 24px 24px;
+      max-width: 640px;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss7814 {
+        gap: 10px;
+        max-width: 500px;
+      }
+    }
+    
+    .jss7815 {
+      height: 100vh;
+      opacity: 0.5;
+      z-index: 1097;
+      background: #1D2633;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7689 {
+      width: 100%;
+      flex-grow: 1;
+      max-width: 1216px;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss7689 {
+        max-width: 892px;
+      }
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7689 {
+        min-height: auto;
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+    }
+    
+    @media (max-width:599.95px) {
+      .jss7689 {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+    
+    .jss7690 {
+      color: #ffffff;
+      width: 100%;
+      flex-grow: 1;
+      margin-top: 32px;
+    }
+    
+    .jss7691 {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7772 {
+      margin-top: 8px;
+    }
+    
+    .jss7773 {
+      margin-top: 8px;
+    }
+    
+    .jss7774 {
+      color: #ffffff;
+      margin-top: 24px;
+    }
+    
+    .jss7775 {
+      margin-top: 24px;
+    }
+    
+    .jss7776 {
+      margin: 24px 0px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .jss7777 {
+      height: 80px;
+    }
+    
+    .jss7778 {
+      margin-top: 16px;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7779 {
+        height: calc(100% <br></br>- 80px);
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7819 {
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      height: 32px;
+      padding: 4px;
+      background: transparent;
+      transition: backgroundColor 250ms cubic-bezier(0.4, 0, 1, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 1, 1) 0ms;
+      border-radius: 8px;
+    }
+    
+    @media (hover: hover) {
+      .jss7819:hover {
+        background-color: #323842;
+      }
+    }
+    
+    .jss7819:active {
+      color: #44EB99;
+      outline: none;
+      background-color: #323842;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7806 {
+      z-index: 1096;
+      transform-origin: 0 0;
+    }
+    
+    .jss7807 {
+      cursor: default;
+      pointer-events: none;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7795 {
+      position: relative;
+    }
+    
+    .jss7796 {
+      margin-bottom: 2rem;
+    }
+    
+    .jss7797 {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7797 {
+        position: static;
+      }
+    }
+    
+    .jss7798 {
+      color: #8191A2;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .jss7799 {
+      margin: 0 0 2rem 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .jss7799:last-child {
+      margin-bottom: 0;
+    }
+    
+    .jss7800 {
+      display: flex;
+      position: relative;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss7800 {
+        justify-content: start;
+      }
+    }
+    
+    .jss7801 {
+      color: #8191A2;
+      right: 0;
+      position: absolute;
+      line-height: 40px;
+    }
+    
+    .jss7802 .MuiBadge-badge {
+      cursor: default;
+      height: 26px;
+      padding: 0 8px;
+      font-size: 12px;
+      min-width: 26px;
+      text-align: center;
+      line-height: 26;
+      user-select: none;
+      border-radius: 16px;
+      pointer-events: none;
+    }
+    
+    .jss7803 {
+      list-style-type: none;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7844 {
+      color: #ffffff;
+      cursor: pointer;
+      height: 56px;
+      display: flex;
+      padding: 8px;
+      align-items: center;
+      border-radius: 16px;
+    }
+    
+    .jss7844:hover {
+      background-color: #861BE3;
+    }
+    
+    .jss7845 {
+      width: 40px;
+      border: 1px solid #ffffff;
+      height: 40px;
+    }
+    
+    .jss7846 {
+      height: 1px;
+      margin: 8px 0;
+      background-color: #C6CFDA;
+    }
+    
+    .jss7847 {
+      color: #A24FEA;
+    }
+    
+    .jss7848 {
+      padding: 16px;
+      min-width: 336px;
+      box-shadow: 0px 19px 38px rgba(29, 38, 51, 0.15), 0px 15px 12px rgba(29, 38, 51, 0.1);
+      border-radius: 8px;
+    }
+    
+    .jss7849 {
+      padding: 0;
+    }
+    
+    .jss7850 {
+      display: flex;
+      padding: 10px 12px;
+      align-items: center;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .jss7850:last-of-type {
+      margin-bottom: 0;
+    }
+    
+    .jss7850:hover {
+      color: #ffffff;
+      background: #A24FEA !important;
+    }
+    
+    .jss7850:focus {
+      background-color: transparent;
+    }
+    
+    .jss7851 {
+      display: flex;
+      padding: 8px 12px;
+      align-items: center;
+      margin-bottom: 8px;
+      justify-content: space-between;
+    }
+    
+    .jss7851:last-of-type {
+      margin-bottom: 0;
+    }
+    
+    .jss7851:hover {
+      background-color: transparent;
+    }
+    
+    .jss7851:focus {
+      background-color: transparent;
+    }
+    
+    .jss7852 {
+      display: block;
+      margin-right: 11px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7693 {
+      z-index: 2;
+      position: relative;
+    }
+    
+    .jss7693 *:before {
+      border-bottom: none !important;
+    }
+    
+    .jss7693::before {
+      border-bottom: none !important;
+    }
+    
+    .jss7694 {
+      color: #ffffff;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss7695 {
+        max-width: 100%;
+      }
+    }
+    
+    .jss7696 {
+      left: 0;
+      right: 0;
+      position: relative;
+      background-color: #1D2633;
+    }
+    
+    .jss7697 {
+      height: 84px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .jss7698 {
+      display: flex;
+      box-shadow: 0px 2px 3px rgba(81, 96, 119, 0.2);
+      margin-top: -1px;
+      min-height: 128px;
+      padding-top: 9px;
+      justify-content: space-between;
+      background-color: #1D2633;
+    }
+    
+    .jss7698:before {
+      top: -95px;
+      width: 100%;
+      height: 100px;
+      content: "";
+      position: absolute;
+      background-color: #1D2633;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7698 {
+        min-height: auto;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss7698 > .jss7702 {
+        width: 156px;
+      }
+    }
+    
+    .jss7699 {
+      min-width: 1440px;
+    }
+    
+    .jss7700 {
+      width: 634px;
+      display: flex;
+      padding: 16px 0;
+      align-items: center;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss7700 {
+        width: 465px;
+      }
+    }
+    
+    .jss7701 {
+      width: 267px;
+      position: relative;
+      flex-shrink: 0;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss7701 {
+        width: 156px;
+      }
+    }
+    
+    @media (min-width:1280px) {
+      .jss7701 {
+        padding-left: 24px;
+      }
+    }
+    
+    .jss7702 {
+      width: 260px;
+      display: flex;
+      z-index: 1100;
+      position: relative;
+      align-items: center;
+      flex-shrink: 0;
+      justify-content: flex-end;
+    }
+    
+    .jss7703 {
+      width: 260px;
+    }
+    
+    .jss7704 {
+      display: flex;
+      column-gap: 16px;
+      align-items: center;
+      padding-right: 32px;
+    }
+    
+    .jss7705 {
+      display: flex;
+      column-gap: 10px;
+    }
+    
+    .jss7706 {
+      width: 100%;
+    }
+    
+    .jss7707 {
+      display: flex;
+      z-index: 1;
+      max-width: 50%;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss7707 {
+        max-width: 100%;
+      }
+    }
+    
+    .jss7708 {
+      display: flex;
+      word-break: break-word;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss7708 {
+        padding: 0 32px;
+        text-align: center;
+      }
+    }
+    
+    .jss7709 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 24px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 800;
+      line-height: 30px;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss7709 {
+        font-size: 18px;
+        font-style: normal;
+        font-family: "SB Sans Display", Helvetica, sans-serif;
+        font-weight: 800;
+        line-height: 24px;
+      }
+    }
+    
+    .jss7710 {
+      color: #D2D9E1;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      margin-right: 16px;
+    }
+    
+    .jss7711 {
+      padding: 2px;
+      transform: rotate(180deg);
+    }
+    
+    .jss7712 {
+      width: 100%;
+    }
+    
+    .jss7713 {
+      width: 56px;
+      height: 56px;
+      background: #323842;
+      border-radius: 12px;
+    }
+    
+    .jss7714 {
+      background: #861BE3;
+    }
+    
+    .jss7715:hover {
+      background: none;
+    }
+    
+    .jss7716 .MuiBadge-badge {
+      color: #212121;
+      cursor: default;
+      height: 16px;
+      padding: 0 4px;
+      font-size: 12px;
+      min-width: 16px;
+      line-height: 16;
+    }
+    
+    .jss7717 {
+      display: flex;
+      min-height: 72px;
+      justify-content: space-between;
+    }
+    
+    @media (max-width:1279.95px) {
+      .jss7717 {
+        max-width: 100%;
+      }
+      .jss7717 .MuiTabs-scroller .MuiTabs-flexContainer {
+        display: block;
+      }
+      .jss7717 .MuiTabs-scroller .MuiTabs-flexContainer .MuiTab-root {
+        min-width: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7717 .MuiTabs-scroller .MuiTabs-flexContainer .MuiButtonBase-root:first-child {
+        margin-left: 16px;
+      }
+      .jss7717 .MuiTabs-scroller .MuiTabs-flexContainer .MuiButtonBase-root:nth-last-child(1) {
+        margin-right: 16px;
+      }
+    }
+    
+    .jss7718 {
+      cursor: pointer;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss29 {
+      top: 0;
+      z-index: 1101;
+      position: sticky;
+      transform: translateY(0%);
+      transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    
+    .jss30 {
+      transform: translateY(-100%);
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss6 {
+      color: #AEBBCA;
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    
+    .jss7 {
+      color: #ffffff;
+      margin-right: 36px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8431 {
+      display: flex;
+      padding: 16px;
+      position: relative;
+      align-items: center;
+      border-radius: 12px;
+      margin-bottom: 1px;
+      justify-content: space-between;
+      text-decoration: none;
+    }
+    
+    .jss8431:not(:last-child):after {
+      width: calc(100% <br></br>- 32px);
+      bottom: -1px;
+      height: 1px;
+      content: " ";
+      position: absolute;
+      background: #516071;
+    }
+    
+    .jss8432 {
+      cursor: pointer;
+      transition: background 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+    
+    .jss8432:hover {
+      color: #212121;
+      background: #A24FEA;
+    }
+    
+    .jss8432:hover .jss8437,
+    .jss8432:hover .jss8440,
+    .jss8432:hover .jss8439 {
+      color: #212121;
+    }
+    
+    .jss8433 {
+      flex: 1;
+      display: flex;
+      min-width: 0;
+      align-items: center;
+    }
+    
+    .jss8434 {
+      display: flex;
+      align-items: center;
+    }
+    
+    .jss8435 {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-left: 12px;
+      margin-right: 24px;
+    }
+    
+    .jss8436 {
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 0;
+      align-items: baseline;
+      margin-right: auto;
+    }
+    
+    .jss8437 {
+      color: #ffffff;
+      overflow: hidden;
+      white-space: normal;
+      margin-right: 12px;
+      text-overflow: ellipsis;
+    }
+    
+    .jss8438 {
+      color: #D2D9E1;
+    }
+    
+    .jss8439 {
+      color: #AEBBCA;
+      margin-right: 12px;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss8439 {
+        font-size: 14px;
+        font-style: normal;
+        font-family: "SB Sans Text", Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+    
+    .jss8440 {
+      flex: 0;
+      color: #AEBBCA;
+      white-space: nowrap;
+    }
+    
+    .jss8440:not(:last-child) {
+      margin-right: 24px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7890 {
+      top: 128px;
+      width: 100%;
+      padding: 24px;
+      position: sticky;
+      max-width: 380px;
+      border-radius: 16px;
+      background-color: #263040;
+    }
+    
+    .jss7891 {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .jss7891 li:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    
+    .jss7892 {
+      color: #ffffff;
+      cursor: pointer;
+      height: 40px;
+      display: -webkit-box;
+      overflow: hidden;
+      font-size: 14px;
+      min-width: 0;
+      font-style: normal;
+      transition: background 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      word-break: break-all;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+      padding-left: 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      -webkit-box-align: center;
+    }
+    
+    .jss7892 > span {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    
+    .jss7892:hover {
+      color: #212121;
+      background: #A24FEA;
+    }
+    
+    .jss7893 {
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    
+    .jss7894 {
+      font-size: 16px;
+      font-style: normal;
+      font-family: "SB Sans Display", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 20px;
+      pointer-events: none;
+    }
+    
+    .jss7895 {
+      top: 24px;
+      left: 24px;
+      width: 4px;
+      height: 40px;
+      z-index: 2;
+      position: absolute;
+      transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 4px;
+      background-color: #A24FEA;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8377 {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss8377 {
+        align-items: flex-end;
+        flex-direction: column;
+      }
+      .jss8377 .MuiInputBase-root {
+        font-size: 14px;
+        font-style: normal;
+        font-family: "SB Sans Text", Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+    
+    .jss8377 .MuiTextField-root {
+      margin: 0;
+    }
+    
+    .jss8377 .MuiTextField-root .MuiFilledInput-root::before {
+      border: none;
+    }
+    
+    .jss8377 .MuiTextField-root .MuiFilledInput-root .MuiInputBase-input {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    
+    .jss8378 {
+      display: flex;
+      flex-shrink: 0;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss8378 {
+        margin-top: 24px;
+      }
+    }
+    
+    .jss8379 {
+      margin-left: 24px;
+    }
+    
+    .jss8380 {
+      margin-left: 8px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8411 {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+    
+    .jss8412 {
+      margin-right: 12px;
+    }
+    
+    .jss8413 {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+    
+    .jss8414 {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .jss8415 {
+      padding: 24px;
+      box-shadow: 0px 2px 3px rgba(81, 96, 119, 0.2);
+      border-radius: 12px;
+      background-color: #2C384A;
+    }
+    
+    .jss8416 {
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+    
+    .jss8417 {
+      display: inline;
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+    
+    .jss8418 {
+      width: 100%;
+    }
+    
+    .jss8419 {
+      display: inline;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8583 {
+      margin-bottom: 48px;
+    }
+    
+    .jss8583 .MuiButton-startIcon {
+      margin: 0;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8342 {
+      display: flex;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss8342 {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    
+    .jss8343 {
+      box-shadow: none;
+      margin-right: 16px;
+      background-color: #44EB99;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss8343 {
+        margin-right: 0;
+      }
+    }
+    
+    .jss8344 {
+      box-shadow: 0 0 0 1px #D2D9E1 inset;
+      margin-right: 0;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8459 {
+      margin-bottom: 12px;
+    }
+    
+    .jss8460 {
+      white-space: pre-wrap;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8446 {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+    
+    .jss8447 {
+      word-break: break-all;
+      margin-bottom: 16px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8549 {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+    
+    .jss8550 {
+      display: flex;
+      margin-bottom: 12px;
+    }
+    
+    .jss8551 {
+      color: #008BFF;
+      margin-left: 12px;
+    }
+    
+    .jss8552 {
+      margin-top: 0;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8553 {
+      max-width: 444px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8478 {
+      display: inline-flex;
+      position: relative;
+    }
+    
+    .jss8479 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      opacity: 0;
+      padding: 0;
+      z-index: 1;
+      position: absolute;
+      -webkit-appearance: none;
+    }
+    
+    .jss8480 {
+      margin: 0;
+      display: flex;
+      z-index: 2;
+      position: relative;
+      font-size: 14px;
+      min-width: 32px;
+      font-style: normal;
+      transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      align-items: center;
+      font-family: "SB Sans Text", Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+      border-radius: 8px;
+    }
+    
+    .jss8480 svg {
+      display: block;
+    }
+    
+    .jss8481 .jss8480 {
+      color: #212121;
+      cursor: pointer;
+      box-shadow: 0 0 0 1px #D2D9E1 inset;
+      background-color: #ffffff;
+    }
+    
+    .jss8481 svg {
+      fill: #212121;
+    }
+    
+    .jss8481 .jss8479:checked ~ .jss8480 {
+      color: #ffffff;
+      box-shadow: none;
+      background-color: #861BE3;
+    }
+    
+    .jss8481 .jss8479:disabled ~ .jss8480 {
+      color: #D2D9E1;
+      box-shadow: 0 0 0 1px #D2D9E1 inset;
+      pointer-events: none;
+    }
+    
+    .jss8481 .jss8479[disabled]:checked ~ .jss8480 {
+      background-color: #D2D9E1;
+    }
+    
+    .jss8481 .jss8479[disabled]:checked ~ .jss8480 > svg {
+      fill: #D2D9E1;
+    }
+    
+    .jss8481 .jss8479:disabled ~ .jss8480 > svg {
+      fill: #D2D9E1;
+    }
+    
+    .jss8481 .jss8479:checked ~ .jss8480 > svg {
+      fill: #ffffff;
+    }
+    
+    .jss8481 .jss8480:hover {
+      color: #ffffff;
+      box-shadow: none;
+      background-color: #A24FEA;
+    }
+    
+    .jss8481 .jss8480:hover > svg {
+      fill: #ffffff;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8570 {
+      margin-right: 12px;
+      margin-bottom: 8px;
+    }
+    
+    .jss8571 svg {
+      fill: #FF4A50;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8569 {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      justify-content: center;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8345 {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8461 {
+      margin-top: -100px;
+      padding-top: 100px;
+    }
+    
+    .jss8462 {
+      word-break: break-all;
+      margin-bottom: 16px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss8474 {
+      word-break: break-all;
+      margin-bottom: 16px;
+    }
+    
+    .jss8474:last-child {
+      margin-bottom: 0;
+    }
+    
+    .jss8475 {
+      margin-right: 12px;
+    }
+    
+    .jss8475:last-child {
+      margin-right: 0;
+    }
+    
+    .jss8476 {
+      display: flex;
+      margin-top: 24px;
+    }
+    
+    .jss8477 {
+      width: 60%;
+    }
+    
+    @media (max-width:599.95px) {
+      .jss8477 {
+        width: 100%;
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7888 {
+      gap: 20px 8px;
+      color: #516071;
+      display: grid;
+      padding: 24px;
+      align-items: center;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      background-color: #263040;
+      grid-template-columns: 24px 1fr 120px;
+    }
+    
+    .jss7889 {
+      text-align: right;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .jss7686 {
+      display: grid;
+      grid-column-gap: 32px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    
+    @media (max-width:599.95px) {
+      .jss7686 {
+        grid-column-gap: 24px;
+      }
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7686 {
+        align-content: start;
+      }
+    }
+    
+    .jss7687 {
+      grid-column: span 8;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7687 {
+        grid-column: span 12;
+      }
+    }
+    
+    .jss7688 {
+      grid-column: span 4;
+    }
+    
+    @media (max-width:959.95px) {
+      .jss7688 {
+        order: -1;
+        grid-column: span 12;
+      }
+    }
+  </style>
+</head>
+
+<body style="overflow: visible;">
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ8HBZ2&gtm_auth=&gtm_preview=&gtm_cookies_win=x" height="0" width="0" style="display:none;visibility:hidden" id="tag-manager"></iframe>
+  </noscript>
+  <script type="text/javascript" src=""></script>
+  <div id="root">
+    <div class="jss7691 jss7692">
+      <nav>
+        <div class="jss7693">
+          <div class="jss7698">
+            <section class="jss7701"></section>
+            <section class="jss7707">
+              <div class="jss7708">
+                <h2 class="jss7709">CheckList. Team01</h2></div>
+              <div class="jss7717">
+                <div class="jss7695"></div>
+              </div>
+            </section>
+            <section class="jss7703"></section>
+          </div>
+        </div>
+      </nav>
+      <div class="jss7689 jss7686">
+        <main class="jss7687">
+          <div id="exercise-014129" class="jss8461">
+            <div class="jss8346" data-testid="checklistForm.section">
+              <div class="jss8347" data-testid="checklistForm.section.header">
+                <div class="jss8348 jss8349">
+                  <h5 class="jss7731 jss7736 jss8350"><div>Exercise 00</div></h5></div>
+                <div class="jss8351" data-testid="checklistForm.section.buttons">
+                  <button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root jss7821 jss8497 jss7828 jss8504 jss8352 jss8353 css-5hq126" tabindex="0" type="button" data-testid="checklistForm.section.button.expanded"><span class="MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="jss7771" width="24" height="24"><path d="M15.88 9.29L12 13.17L8.12 9.29C7.73 8.9 7.1 8.9 6.71 9.29C6.32 9.68 6.32 10.31 6.71 10.7L11.3 15.29C11.69 15.68 12.32 15.68 12.71 15.29L17.3 10.7C17.69 10.31 17.69 9.68 17.3 9.29C16.91 8.91 16.27 8.9 15.88 9.29Z"></path></svg></span></button>
+                </div>
+              </div>
+              <div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-c4sutr" data-testid="checklistForm.section.collapse" style="min-height: 0px;">
+                <div class="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
+                  <div class="jss8354 MuiCollapse-wrapperInner MuiCollapse-vertical css-8atqhb">
+                    <div>
+                      <div class="jss8372 jss8376 MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 jss8474 css-dar48a" type="default">
+                        <h5 class="jss7731 jss7736 jss8459">Exercise 00 - Basics</h5>
+                        <p class="jss7731 jss7739 jss8460">- Are the WeatherForecast, WeatherForecastController, Startup, Program, appsettings, appsettings.Development files present in the project?</br>- Does the Get() method in WeatherForecastController have XML-comments with a description of the method?</br>- Does the swagger-documentation of the application open and is it possible to read the description of the Get() method on its page?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="exercise-024130" class="jss8461">
+            <div class="jss8346" data-testid="checklistForm.section">
+              <div class="jss8347" data-testid="checklistForm.section.header">
+                <div class="jss8348 jss8349">
+                  <h5 class="jss7731 jss7736 jss8350"><div>Exercise 01</div></h5></div>
+                <div class="jss8351" data-testid="checklistForm.section.buttons">
+                  <button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root jss7821 jss8510 jss7828 jss8517 jss8352 jss8353 css-5hq126" tabindex="0" type="button" data-testid="checklistForm.section.button.expanded"><span class="MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="jss7771" width="24" height="24"><path d="M15.88 9.29L12 13.17L8.12 9.29C7.73 8.9 7.1 8.9 6.71 9.29C6.32 9.68 6.32 10.31 6.71 10.7L11.3 15.29C11.69 15.68 12.32 15.68 12.71 15.29L17.3 10.7C17.69 10.31 17.69 9.68 17.3 9.29C16.91 8.91 16.27 8.9 15.88 9.29Z"></path></svg></span></button>
+                </div>
+              </div>
+              <div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-c4sutr" data-testid="checklistForm.section.collapse" style="min-height: 0px;">
+                <div class="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
+                  <div class="jss8354 MuiCollapse-wrapperInner MuiCollapse-vertical css-8atqhb">
+                    <div>
+                      <div class="jss8372 jss8376 MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 jss8474 css-dar48a" type="default">
+                        <h5 class="jss7731 jss7736 jss8459">Exercise 01 - Environment.</h5>
+                        <p class="jss7731 jss7739 jss8460">- If you run the application in a Production environment, the swagger-documentation should not be unavailable. Is it so?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="exercise-034131" class="jss8461">
+            <div class="jss8346" data-testid="checklistForm.section">
+              <div class="jss8347" data-testid="checklistForm.section.header">
+                <div class="jss8348 jss8349">
+                  <h5 class="jss7731 jss7736 jss8350"><div>Exercise 02</div></h5></div>
+                <div class="jss8351" data-testid="checklistForm.section.buttons">
+                  <button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root jss7821 jss8523 jss7828 jss8530 jss8352 jss8353 css-5hq126" tabindex="0" type="button" data-testid="checklistForm.section.button.expanded"><span class="MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="jss7771" width="24" height="24"><path d="M15.88 9.29L12 13.17L8.12 9.29C7.73 8.9 7.1 8.9 6.71 9.29C6.32 9.68 6.32 10.31 6.71 10.7L11.3 15.29C11.69 15.68 12.32 15.68 12.71 15.29L17.3 10.7C17.69 10.31 17.69 9.68 17.3 9.29C16.91 8.91 16.27 8.9 15.88 9.29Z"></path></svg></span></button>
+                </div>
+              </div>
+              <div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-c4sutr" data-testid="checklistForm.section.collapse" style="min-height: 0px;">
+                <div class="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
+                  <div class="jss8354 MuiCollapse-wrapperInner MuiCollapse-vertical css-8atqhb">
+                    <div>
+                      <div class="jss8372 jss8376 MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 jss8474 css-dar48a" type="default">
+                        <h5 class="jss7731 jss7736 jss8459">Exercise 02 - GET weather by coordinates.</h5>
+                        <p class="jss7731 jss7739 jss8460">- Does the Get() method use a remote resource to get a weather forecast?</br>- Is it possible to call it from the browser and get the weather forecast? Will the result change when the coordinates change?</br>- Is information about temperature, pressure, humidity, wind speed, the name of a geographical object and a description of the weather output?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="exercise-034131" class="jss8461">
+            <div class="jss8346" data-testid="checklistForm.section">
+              <div class="jss8347" data-testid="checklistForm.section.header">
+                <div class="jss8348 jss8349">
+                  <h5 class="jss7731 jss7736 jss8350"><div>Exercise 03</div></h5></div>
+                <div class="jss8351" data-testid="checklistForm.section.buttons">
+                  <button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root jss7821 jss8523 jss7828 jss8530 jss8352 jss8353 css-5hq126" tabindex="0" type="button" data-testid="checklistForm.section.button.expanded"><span class="MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="jss7771" width="24" height="24"><path d="M15.88 9.29L12 13.17L8.12 9.29C7.73 8.9 7.1 8.9 6.71 9.29C6.32 9.68 6.32 10.31 6.71 10.7L11.3 15.29C11.69 15.68 12.32 15.68 12.71 15.29L17.3 10.7C17.69 10.31 17.69 9.68 17.3 9.29C16.91 8.91 16.27 8.9 15.88 9.29Z"></path></svg></span></button>
+                </div>
+              </div>
+              <div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-c4sutr" data-testid="checklistForm.section.collapse" style="min-height: 0px;">
+                <div class="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
+                  <div class="jss8354 MuiCollapse-wrapperInner MuiCollapse-vertical css-8atqhb">
+                    <div>
+                      <div class="jss8372 jss8376 MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 jss8474 css-dar48a" type="default">
+                        <h5 class="jss7731 jss7736 jss8459">Exercise 03 - GET weather by city.</h5>
+                        <p class="jss7731 jss7739 jss8460"></br>- Does the method use a remote resource to get a weather forecast?</br>- Is it possible to call it from the browser using the link /WeatherForecast /{cityName} and get the weather forecast? Will the result change when the city name is changed?</br>- Is information about temperature, pressure, humidity, wind speed, the name of a geographical object and a description of the weather output?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="exercise-034131" class="jss8461">
+            <div class="jss8346" data-testid="checklistForm.section">
+              <div class="jss8347" data-testid="checklistForm.section.header">
+                <div class="jss8348 jss8349">
+                  <h5 class="jss7731 jss7736 jss8350"><div>Exercise 04</div></h5></div>
+                <div class="jss8351" data-testid="checklistForm.section.buttons">
+                  <button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root jss7821 jss8523 jss7828 jss8530 jss8352 jss8353 css-5hq126" tabindex="0" type="button" data-testid="checklistForm.section.button.expanded"><span class="MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="jss7771" width="24" height="24"><path d="M15.88 9.29L12 13.17L8.12 9.29C7.73 8.9 7.1 8.9 6.71 9.29C6.32 9.68 6.32 10.31 6.71 10.7L11.3 15.29C11.69 15.68 12.32 15.68 12.71 15.29L17.3 10.7C17.69 10.31 17.69 9.68 17.3 9.29C16.91 8.91 16.27 8.9 15.88 9.29Z"></path></svg></span></button>
+                </div>
+              </div>
+              <div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-c4sutr" data-testid="checklistForm.section.collapse" style="min-height: 0px;">
+                <div class="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
+                  <div class="jss8354 MuiCollapse-wrapperInner MuiCollapse-vertical css-8atqhb">
+                    <div>
+                      <div class="jss8372 jss8376 MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 jss8474 css-dar48a" type="default">
+                        <h5 class="jss7731 jss7736 jss8459">Exercise 04 - Code refactoring.</h5>
+                        <p class="jss7731 jss7739 jss8460"></br>- Is the solution divided into 2 projects? Does the rush01.WeatherClient project have a service responsible for communicating with a remote resource? Does it contain 2 separate methods?</br>- Is the API KEY value moved to the appsettings.json and appsettings.Development.json files? Is it passed to the WeatherClient class and used as an argument?</br>- Is an object of the type WeatherClient private and readonly a property of the controller? Is it passed to the constructor to initialize the property?</br>- Is WeatherClient registration configured in Startup?</br>- Does the WeatherClient class accept an object of the IOptions<ServiceSettings> type in the constructor? Is it used to set the key for connecting to a remote resource?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="exercise-034131" class="jss8461">
+            <div class="jss8346" data-testid="checklistForm.section">
+              <div class="jss8347" data-testid="checklistForm.section.header">
+                <div class="jss8348 jss8349">
+                  <h5 class="jss7731 jss7736 jss8350"><div>Exercise 05</div></h5></div>
+                <div class="jss8351" data-testid="checklistForm.section.buttons">
+                  <button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root jss7821 jss8523 jss7828 jss8530 jss8352 jss8353 css-5hq126" tabindex="0" type="button" data-testid="checklistForm.section.button.expanded"><span class="MuiButton-startIcon MuiButton-iconSizeMedium css-6xugel"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="jss7771" width="24" height="24"><path d="M15.88 9.29L12 13.17L8.12 9.29C7.73 8.9 7.1 8.9 6.71 9.29C6.32 9.68 6.32 10.31 6.71 10.7L11.3 15.29C11.69 15.68 12.32 15.68 12.71 15.29L17.3 10.7C17.69 10.31 17.69 9.68 17.3 9.29C16.91 8.91 16.27 8.9 15.88 9.29Z"></path></svg></span></button>
+                </div>
+              </div>
+              <div class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-c4sutr" data-testid="checklistForm.section.collapse" style="min-height: 0px;">
+                <div class="MuiCollapse-wrapper MuiCollapse-vertical css-hboir5">
+                  <div class="jss8354 MuiCollapse-wrapperInner MuiCollapse-vertical css-8atqhb">
+                    <div>
+                      <div class="jss8372 jss8376 MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 jss8474 css-dar48a" type="default">
+                        <h5 class="jss7731 jss7736 jss8459">Exercise 05 - POST/PUT/DELETE, repeat.</h5>
+                        <p class="jss7731 jss7739 jss8460"></br>- Is the Post() method implemented in the controller, which takes a text value and writes it to the cache?</br>- Is it true:</br>- Call the Get method without specifying the city. The method should return the status 404.</br>- Call the Get method specifying the city of Barnaul. The method should return the weather for the city of Barnaul.</br>- Call the Post method specifying the city of Albuquerque. The method should return the status 200.</br>- Call the Get method specifying the city of Barnaul. The method should return the weather for the city of Barnaul.</br>- Call the Get method without specifying the city. The method should return the weather for the city of Albuquerque.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script nomodule="">
+    ! function() {
+      var e = document,
+        t = e.createElement("script");
+      if (!("noModule" in t) && "onbeforeload" in t) {
+        var n = !1;
+        e.addEventListener("beforeload", (function(e) {
+          if (e.target === t) n = !0;
+          else if (!e.target.hasAttribute("nomodule") || !n) return;
+          e.preventDefault()
+        }), !0), t.type = "module", t.src = ".", e.head.appendChild(t), t.remove()
+      }
+    }();
+  </script>
+  <script nomodule="" id="vite-legacy-polyfill" src="./d07_files/polyfills-legacy.a83a1fdc.js"></script>
+  <script nomodule="" id="vite-legacy-entry" data-src="/index-legacy.c823e093.js">
+    System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))
+  </script>
+
+  <svg style="width: 0px; height: 0px; position: absolute; top: -100%; left: -100%;">
+    <text id="__react_svg_text_measurement_id" style="font-family: &quot;SB Sans Text&quot;, Helvetica, sans-serif; font-style: normal; font-weight: 600; font-size: 11px; line-height: 18px; text-transform: uppercase;">23.06.2023</text>
+  </svg>
+</body>
+
+</html>
